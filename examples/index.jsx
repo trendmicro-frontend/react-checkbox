@@ -37,7 +37,7 @@ class App extends React.Component {
                                     Normal
                                 </label>
                                 <label className="checkbox">
-                                    <input type="checkbox" name="optionscheckboxs" checked />
+                                    <input type="checkbox" name="optionscheckboxs" defaultChecked />
                                     Checked
                                 </label>
                                 <label className="checkbox">
@@ -45,7 +45,7 @@ class App extends React.Component {
                                     Partial checked
                                 </label>
                                 <label className="checkbox disabled">
-                                    <input type="checkbox" name="optionscheckboxs" checked disabled />
+                                    <input type="checkbox" name="optionscheckboxs" defaultChecked disabled />
                                     Checked disabled
                                 </label>
                                 <label className="checkbox disabled">
@@ -56,10 +56,10 @@ class App extends React.Component {
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
                                 <Checkbox className="checkbox" text="Normal" />
-                                <Checkbox className="checkbox" text="Checked" checked={true} />
-                                <Checkbox className="checkbox" text="Partial checked" indeterminate={true} />
-                                <Checkbox className="checkbox" text="Checked disabled" checked={true} disabled={true} />
-                                <Checkbox className="checkbox" text="Disabled" disabled={true} />
+                                <Checkbox className="checkbox" text="Checked" defaultChecked />
+                                <Checkbox className="checkbox" text="Partial checked" indeterminate />
+                                <Checkbox className="checkbox" text="Checked disabled" defaultChecked disabled />
+                                <Checkbox className="checkbox" text="Disabled" disabled />
                             </div>
                         </Section>
                     </div>
@@ -83,7 +83,7 @@ class App extends React.Component {
                                     Disabled label
                                 </label>
                                 <label className="checkbox">
-                                    <input type="checkbox" name="default" checked />
+                                    <input type="checkbox" name="default" defaultChecked />
                                     Checked label
                                     <div>
                                         <div>Sed posuere consecteyur est at lobortus. Aenean eu leo quam.</div>
@@ -93,10 +93,10 @@ class App extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <Checkbox className="checkbox" text="Normal label one" />
-                                <Checkbox className="checkbox" text="Normal label two" />
-                                <Checkbox className="checkbox" text="Disabled label" disabled={true} />
-                                <Checkbox className="checkbox" text="Checked label" checked={true}>
+                                <Checkbox className="checkbox" name="default2" text="Normal label one" />
+                                <Checkbox className="checkbox" name="default2" text="Normal label two" />
+                                <Checkbox className="checkbox" name="default2" text="Disabled label" disabled />
+                                <Checkbox className="checkbox" name="default2" text="Checked label" defaultChecked>
                                     <div>
                                         <div>Sed posuere consecteyur est at lobortus. Aenean eu leo quam.</div>
                                         <div>Pellentesque omare sem lacinia quam venenatis vestibulum.</div>
@@ -121,15 +121,15 @@ class App extends React.Component {
                                     Disabled label
                                 </label>
                                 <label className="checkbox-inline">
-                                    <input type="checkbox" name="inline" checked />
+                                    <input type="checkbox" name="inline" defaultChecked />
                                     Checked label
                                 </label>
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <Checkbox className="checkbox-inline" text="Normal label" />
-                                <Checkbox className="checkbox-inline" text="Disabled label" disabled={true} />
-                                <Checkbox className="checkbox-inline" text="Checked label" checked={true} />
+                                <Checkbox className="checkbox-inline" name="inline2" text="Normal label" />
+                                <Checkbox className="checkbox-inline" name="inline2" text="Disabled label" disabled />
+                                <Checkbox className="checkbox-inline" name="inline2" text="Checked label" defaultChecked />
                             </div>
                         </Section>
                     </div>

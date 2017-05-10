@@ -26,7 +26,7 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 ## Usage
 
 ```js
-<Checkbox className="checkbox-inline" text="Disabled label" disabled={true} indeterminate={true} />
+<Checkbox className="checkbox-inline" text="Disabled label" disabled indeterminate />
 ```
 
 
@@ -34,7 +34,7 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 
 ### Properties
 
-Name | Type | Default | Description 
+Name | Type | Default | Description
 :--- | :--- | :------ | :----------
 
 ## License
