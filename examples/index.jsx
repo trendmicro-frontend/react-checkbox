@@ -1,4 +1,5 @@
 import 'trendmicro-ui/dist/css/trendmicro-ui.css';
+import '@trendmicro/react-buttons/dist/react-buttons.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './Navbar';
@@ -16,17 +17,19 @@ class App extends React.Component {
                 <div style={{ padding: '20px 20px 0' }}>
                     <div className="col-md-12">
                         <Section className="row-md-6">
-                            <h3 style={{ margin: '16px 0' }}>
-                                Checkboxes
-                            </h3>
-                            <p>Checkboxes are used to permit the user to select one or more options from a set.</p>
-                            <ul>
-                                <li>The user can select one, one, or multiple options from a set</li>
-                                <li>When clicked, a checkbox displays or removes its check mark</li>
-                                <li>Use sentence case for checkbox labels</li>
-                                <li>Align checkbox labels vertically whenever possible</li>
-                                <li>Make labels clickable whenever possible</li>
-                            </ul>
+                            <div className="col-md-12">
+                                <h3 style={{ margin: '16px 0' }}>
+                                    Checkboxes
+                                </h3>
+                                <p>Checkboxes are used to permit the user to select one or more options from a set.</p>
+                                <ul>
+                                    <li>The user can select one, one, or multiple options from a set</li>
+                                    <li>When clicked, a checkbox displays or removes its check mark</li>
+                                    <li>Use sentence case for checkbox labels</li>
+                                    <li>Align checkbox labels vertically whenever possible</li>
+                                    <li>Make labels clickable whenever possible</li>
+                                </ul>
+                            </div>
                             <div className="col-md-6">
                                 <h6>HTML Checkbox</h6>
                                 <label className="checkbox">
