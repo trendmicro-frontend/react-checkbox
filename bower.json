@@ -1,0 +1,18 @@
+{
+  "name": "@trendmicro/react-checkbox",
+  "description": "Trend Micro Components: React Checkbox",
+  "authors": [
+    {
+      "name": "Tina C Lin",
+      "email": "tina_c_lin@trend.com.tw",
+      "homepage": "https://github.com/trendmicro-frontend"
+    }
+  ],
+  "homepage": "https://github.com/trendmicro-frontend/react-checkbox",
+  "snapshots": [],
+  "keywords": [
+    "react",
+    "react-checkbox"
+  ],
+  "license": "MIT"
+}
