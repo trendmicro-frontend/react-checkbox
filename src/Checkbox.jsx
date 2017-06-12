@@ -38,7 +38,7 @@ class Checkbox extends PureComponent {
                     }
                 />
                 <i className={styles.controlIndicator} />
-                { text }
+                <span className={styles.controlText}>{ text }</span>
                 { children }
             </label>
         );

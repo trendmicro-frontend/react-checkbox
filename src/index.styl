@@ -1,62 +1,75 @@
 /*== Customize Checkbox ==*/
-.input-checkbox {
-    display: none;
+.control-checkbox {
+    .input-checkbox {
+        display: none;
+    }
+    .control-indicator {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .control-text:not(:empty) {
+        display: inline-block;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
 }
 
-.input-checkbox + .control-indicator::before {
+// Normal
+.input-checkbox + .control-indicator {
     content: "";
     display: inline-block;
-    background-color: #ffffff;
-    border: 1px solid #999999;
-    border-radius: 2px;
-    margin-right: 8px;
-    margin-top: 3px;
-    width: 14px;
-    height: 14px;
-    vertical-align: top;
+    background: url(../images/icon/component_checkbox.png) no-repeat -1px 0;
+    width: 16px;
+    height: 16px;
 }
 
 // Checkbox checked
-.input-checkbox:checked + .control-indicator::before {
-    content: "";
-    background-image: url(../images/icon/component_check.svg);
-    background-position: center;
-    border: 1px solid #0096cc;
-    background-color: #0096cc;
-    transition: .2s;
+.input-checkbox:checked + .control-indicator {
+    background-position: -41px 0;
 }
 
 // Partial checked
-.input-checkbox:indeterminate + .control-indicator::before {
-    content: "\25A0";
-    color: #0096cc;
-    font-size: 13px;
-    text-align: center;
-    line-height: 10px;
-    transition: .2s;
+.input-checkbox:indeterminate + .control-indicator {
+    background-position: -101px 0;
 }
 
 // Hover
-.control-checkbox:not(.disabled):hover > .control-indicator::before {
-    border: 1px solid #0096cc;
+.control-checkbox:not(.disabled):hover > .control-indicator {
+    background-position: -21px 0;
 }
 
 // Checked:hover
-.control-checkbox:not(.disabled):hover > .input-checkbox:checked + .control-indicator::before {
-    border: 1px solid #33ABD6;
-    background-color: #33ABD6;
+.control-checkbox:not(.disabled):hover > .input-checkbox:checked + .control-indicator {
+    background-position: -61px 0;
+}
+
+// Partial:hover
+.control-checkbox:not(.disabled):hover > .input-checkbox:indeterminate + .control-indicator {
+    background-position: -121px 0;
 }
 
 // Disabled
-.input-checkbox:not(:checked):disabled {
-    cursor: not-allowed;
-
-    + .control-indicator::before {
-        border: 1px solid #999999;
-        background-color: #dddddd;
-    }
+.input-checkbox:not(:checked):not(:indeterminate):disabled + .control-indicator {
+    background-position: -81px 0;
 }
-.control-checkbox.disabled {
+
+// Disabled - text
+.control-checkbox.disabled > .control-text {
     opacity: .4;
     cursor: not-allowed;
+}
+
+// Disabled - cursor
+.input-checkbox:disabled + .control-indicator {
+    cursor: not-allowed;
+}
+
+// Checked:disabled
+.input-checkbox:checked:disabled + .control-indicator {
+    opacity: .4;
+}
+
+// Partial:disabled
+.input-checkbox:not(:checked):indeterminate:disabled + .control-indicator {
+    opacity: .4;
 }

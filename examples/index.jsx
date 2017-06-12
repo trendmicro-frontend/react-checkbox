@@ -16,7 +16,7 @@ class App extends React.Component {
                 <Navbar name={name} url={url} />
                 <div style={{ padding: '20px 20px 0' }}>
                     <div className="col-md-12">
-                        <Section className="row-md-6">
+                        <Section className="row-md-7">
                             <div className="col-md-12">
                                 <h3 style={{ margin: '16px 0' }}>
                                     Checkboxes
@@ -58,6 +58,7 @@ class App extends React.Component {
                                 <Checkbox className="checkbox" text="Normal" />
                                 <Checkbox className="checkbox" text="Checked" defaultChecked />
                                 <Checkbox className="checkbox" text="Partial checked" indeterminate />
+                                <Checkbox className="checkbox" text="Partial checked disabled" indeterminate disabled />
                                 <Checkbox className="checkbox" text="Checked disabled" defaultChecked disabled />
                                 <Checkbox className="checkbox" text="Disabled" disabled />
                             </div>
