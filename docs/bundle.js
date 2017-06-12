@@ -68,10 +68,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../images/icon/component_check.svg":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "../images/icon/component_checkbox.png":
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "8854c448a7903a7159ef7743634bae8c.svg";
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJwAAAAQCAYAAADjyhbuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu1JREFUeNrsWUFrE0EUfpsoSUqLsa2BLD20iIoBobDpQUG00IMXwYI5KsZDQS8i/oDdvVfw5CGHBiriwYN48yAqiF7cxeghhxahomzQ1jTQmk0tMc4bTUTdJDPb7ToJ+8Ekm5nZL7yZb9+btw8gQAAfIeGHYRga+VI579XT6bTmOHLbHR9c9YdPuV90xWdmUo58ZP0UpOXkM8n6mW34hN6P5ZMzrvgOPX+sScS4OPmxLssyJJNJpjtLpRJYlgXEQMnBOMqnTcmgptn4dKME2isLiIFt+Vw9Tg58RGyu+YjgpDYCmYvFYhCNRpl4arUa2LaN65dz4BJ6P4jYKN9w9iIMZy8w8ZXzd0hbBCI4KdTsZDUOkUgkus5hNQ5x7VgCeh2sYkNEIpGuc0TfD1axIeKZ2dZ1iDwVFd7FDYfDnbwKN188snO+B2cOQuOKwuKlmPjmT4yBcf7o7pxjJKntmOj7QbwUN19ocLB1vacfDqLnJuK0rWx884TvtDxEW6m6LYR9+xcKUNmq/yOK9cuTQvBxia/XxYYLlZ8ep9ezj97tmG9obxjUqZ/h58bLj0LY+Lc42vX9L76+FhyGzktHRlq/UWwoOjzoFtaq3HwYOs+O7/t91iFiQ9HlimuwVKkF7zE8Rs+F1Ga4e2ZttEIpCo1mVS6gHBigzVytwqlf3Ci0XHE1UEfg4TBlt6hHQ0+npmXal3363jUfejL0aPPHx2AuNUr7NOItAwSCo7j19jP1bpOjA1R41198cBVKm7i3XKbe7XA8SoV3880n4UKpU9bYMbP3ma+vQyr1aE9W4HUmBYUvVSpAL7zm3ZkJIrQtKkDR4HX26Ec22leCw9cfmNp7BevrNkw/XArinZ8hFcsjLKjX60xzdcZzEKbjeh+cmbBcxYJGo8E0V/T9wHIVC75vbv4xt+nhdMuyVKzH8USiTmMka1Q5M0e9yxh/8dk/PtO2bQXroxwwO/2X6PtRzi+qWB/1iC9AgN3BDwEGADhJW/UAdUKFAAAAAElFTkSuQmCC"
 
 /***/ }),
 
@@ -552,16 +552,18 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, "/*== Customize Checkbox ==*/\n.input-checkbox----ctQ9 {\n  display: none;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K::before {\n  content: \"\";\n  display: inline-block;\n  background-color: #fff;\n  border: 1px solid #999;\n  border-radius: 2px;\n  margin-right: 8px;\n  margin-top: 3px;\n  width: 14px;\n  height: 14px;\n  vertical-align: top;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K::before {\n  content: \"\";\n  background-image: url(" + __webpack_require__("../images/icon/component_check.svg") + ");\n  background-position: center;\n  border: 1px solid #0096cc;\n  background-color: #0096cc;\n  -webkit-transition: 0.2s;\n  -moz-transition: 0.2s;\n  -o-transition: 0.2s;\n  -ms-transition: 0.2s;\n  transition: 0.2s;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K::before {\n  content: \"\\25A0\";\n  color: #0096cc;\n  font-size: 13px;\n  text-align: center;\n  line-height: 10px;\n  -webkit-transition: 0.2s;\n  -moz-transition: 0.2s;\n  -o-transition: 0.2s;\n  -ms-transition: 0.2s;\n  transition: 0.2s;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K::before {\n  border: 1px solid #0096cc;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K::before {\n  border: 1px solid #33abd6;\n  background-color: #33abd6;\n}\n.input-checkbox----ctQ9:not(:checked):disabled {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:not(:checked):disabled + .control-indicator---1RE7K::before {\n  border: 1px solid #999;\n  background-color: #ddd;\n}\n.control-checkbox---OXP52.disabled---3l4Hc {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n", ""]);
+exports.push([module.i, "/*== Customize Checkbox ==*/\n.control-checkbox---OXP52 .input-checkbox----ctQ9 {\n  display: none;\n}\n.control-checkbox---OXP52 .control-indicator---1RE7K {\n  display: inline-block;\n  vertical-align: middle;\n}\n.control-checkbox---OXP52 .control-text---1nZAA:not(:empty) {\n  display: inline-block;\n  margin-left: 8px;\n  vertical-align: middle;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K {\n  content: \"\";\n  display: inline-block;\n  background: url(" + __webpack_require__("../images/icon/component_checkbox.png") + ") no-repeat -1px 0;\n  width: 16px;\n  height: 16px;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -41px 0;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -101px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K {\n  background-position: -21px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -61px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -121px 0;\n}\n.input-checkbox----ctQ9:not(:checked):not(:indeterminate):disabled + .control-indicator---1RE7K {\n  background-position: -81px 0;\n}\n.control-checkbox---OXP52.disabled---3l4Hc > .control-text---1nZAA {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:disabled + .control-indicator---1RE7K {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:checked:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n.input-checkbox----ctQ9:not(:checked):indeterminate:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n", ""]);
 
 // exports
 exports.locals = {
+	"control-checkbox": "control-checkbox---OXP52",
+	"controlCheckbox": "control-checkbox---OXP52",
 	"input-checkbox": "input-checkbox----ctQ9",
 	"inputCheckbox": "input-checkbox----ctQ9",
 	"control-indicator": "control-indicator---1RE7K",
 	"controlIndicator": "control-indicator---1RE7K",
-	"control-checkbox": "control-checkbox---OXP52",
-	"controlCheckbox": "control-checkbox---OXP52",
+	"control-text": "control-text---1nZAA",
+	"controlText": "control-text---1nZAA",
 	"disabled": "disabled---3l4Hc"
 };
 
@@ -23545,7 +23547,11 @@ var Checkbox = (_temp = _class = function (_PureComponent) {
                     }
                 })),
                 _react2.default.createElement('i', { className: _index2.default.controlIndicator }),
-                text,
+                _react2.default.createElement(
+                    'span',
+                    { className: _index2.default.controlText },
+                    text
+                ),
                 children
             );
         }
@@ -23905,7 +23911,7 @@ var App = function (_React$Component) {
                         { className: 'col-md-12' },
                         _react2.default.createElement(
                             _Section2.default,
-                            { className: 'row-md-6' },
+                            { className: 'row-md-7' },
                             _react2.default.createElement(
                                 'div',
                                 { className: 'col-md-12' },
@@ -24001,6 +24007,7 @@ var App = function (_React$Component) {
                                 _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Normal' }),
                                 _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Checked', defaultChecked: true }),
                                 _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Partial checked', indeterminate: true }),
+                                _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Partial checked disabled', indeterminate: true, disabled: true }),
                                 _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Checked disabled', defaultChecked: true, disabled: true }),
                                 _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Disabled', disabled: true })
                             )
@@ -24169,4 +24176,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?0c2bf667f289a67868a6
+//# sourceMappingURL=bundle.js.map?eda8515c66bfa093e4ec
