@@ -26,7 +26,34 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 ## Usage
 
 ```js
-<Checkbox className="checkbox-inline" text="Disabled label" disabled indeterminate />
+// Basic
+<Checkbox />
+
+// Checked
+<Checkbox defaultChecked />
+
+// Partial checked
+<Checkbox defaultIndeterminate />
+
+// Partial checked. Fixed indeterminate status (Do not change by click)
+<Checkbox indeterminate />
+
+// Disabled
+<Checkbox disabled />
+
+// With Label
+<label className="checkbox">
+    <Checkbox />
+    Normal
+</label>
+
+// Get checkbox checked status
+<Checkbox 
+    ref={node => {
+        this.checkbox = node;
+    }}
+/>
+// Get checked status by this.checkbox.checked
 ```
 
 
@@ -36,6 +63,44 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 
 Name | Type | Default | Description
 :--- | :--- | :------ | :----------
+
+<table>
+    <thead>
+        <tr>
+            <th align="left">Name</th>
+            <th align="left">Type</th>
+            <th align="left">Default</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>defaultChecked</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Specify default checked status for checkbox</td>
+        </tr>
+        <tr>
+            <td>defaultIndeterminate</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Specify default indeterminate status for checkbox</td>
+        </tr>
+        <tr>
+            <td>indeterminate</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Force indeterminate status for checkbox</td>
+        </tr>
+        <tr>
+            <td>disabled</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Specify disabled status for checkbox</td>
+        </tr>
+  </tbody>
+</table>
+
 
 ## License
 

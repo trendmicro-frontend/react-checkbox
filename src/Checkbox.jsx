@@ -1,46 +1,82 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import chainedFunction from 'chained-function';
 import styles from './index.styl';
 
 class Checkbox extends PureComponent {
     static propTypes = {
-        checked: PropTypes.bool,
+        defaultChecked: PropTypes.bool,
         disabled: PropTypes.bool,
         indeterminate: PropTypes.bool,
-        text: PropTypes.string
+        defaultIndeterminate: PropTypes.bool
     };
+
+    static defaultProps = {
+        defaultChecked: false,
+        disabled: false,
+        defaultIndeterminate: false
+    };
+
+    fields = {
+        checkbox: null
+    };
+
+    get checked() {
+        return this.fields.checkbox.checked;
+    }
+
+    get indeterminate() {
+        return this.fields.checkbox.indeterminate;
+    }
+
+    actions = {
+        onChange: () => {
+            if (typeof (this.props.indeterminate) !== 'undefined') {
+                this.fields.checkbox.indeterminate = this.props.indeterminate;
+            }
+        }
+    }
 
     render() {
         const {
             className,
-            children,
+            defaultChecked,
             disabled,
-            indeterminate,
-            text,
+            defaultIndeterminate,
             ...props
         } = this.props;
+
+        const onChange = props.onChange || function() {};
+        delete props.onChange;
+        delete props.indeterminate;
+
         return (
-            <label
+            <div
                 className={classNames(
                     className,
-                    styles.controlCheckbox,
+                    styles['control-checkbox'],
                     { [styles.disabled]: disabled }
                 )}
             >
                 <input
                     {...props}
                     type="checkbox"
+                    defaultChecked={defaultChecked}
                     disabled={disabled}
-                    className={styles.inputCheckbox}
-                    ref={
-                        el => el && (el.indeterminate = indeterminate)
-                    }
+                    className={styles['input-checkbox']}
+                    ref={node => {
+                        this.fields.checkbox = node;
+                        const indeterminate = (typeof (this.props.indeterminate) !== 'undefined') ? this.props.indeterminate : defaultIndeterminate;
+                        node && (this.fields.checkbox.indeterminate = indeterminate);
+                    }}
+                    onChange={chainedFunction(
+                        this.actions.onChange,
+                        onChange
+                    )}
                 />
-                <i className={styles.controlIndicator} />
-                <span className={styles.controlText}>{ text }</span>
-                { children }
-            </label>
+                <i className={styles['control-indicator']} />
+            </div>
         );
     }
 }

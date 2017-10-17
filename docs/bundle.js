@@ -458,6 +458,57 @@ exports.ButtonToolbar = _ButtonToolbar3.default;
 
 /***/ }),
 
+/***/ "../node_modules/chained-function/lib/chained-function.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+        funcs[_key] = arguments[_key];
+    }
+
+    return funcs.filter(function (func) {
+        return typeof func === 'function';
+    }).reduce(function (accumulator, func) {
+        if (accumulator === null) {
+            return func;
+        }
+
+        return function chainedFunction() {
+            for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+                args[_key2] = arguments[_key2];
+            }
+
+            accumulator.apply(this, args);
+            func.apply(this, args);
+        };
+    }, null);
+};
+
+/***/ }),
+
+/***/ "../node_modules/chained-function/lib/index.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _chainedFunction = __webpack_require__("../node_modules/chained-function/lib/chained-function.js");
+
+var _chainedFunction2 = _interopRequireDefault(_chainedFunction);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = _chainedFunction2.default;
+
+/***/ }),
+
 /***/ "../node_modules/classnames/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -552,7 +603,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, "/*== Customize Checkbox ==*/\n.control-checkbox---OXP52 .input-checkbox----ctQ9 {\n  display: none;\n}\n.control-checkbox---OXP52 .control-indicator---1RE7K {\n  display: inline-block;\n  vertical-align: middle;\n}\n.control-checkbox---OXP52 .control-text---1nZAA:not(:empty) {\n  display: inline-block;\n  margin-left: 8px;\n  vertical-align: middle;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K {\n  content: \"\";\n  display: inline-block;\n  background: url(" + __webpack_require__("../images/icon/component_checkbox.png") + ") no-repeat -1px 0;\n  width: 16px;\n  height: 16px;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -41px 0;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -101px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K {\n  background-position: -21px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -61px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -121px 0;\n}\n.input-checkbox----ctQ9:not(:checked):not(:indeterminate):disabled + .control-indicator---1RE7K {\n  background-position: -81px 0;\n}\n.control-checkbox---OXP52.disabled---3l4Hc > .control-text---1nZAA {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:disabled + .control-indicator---1RE7K {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:checked:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n.input-checkbox----ctQ9:not(:checked):indeterminate:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n", ""]);
+exports.push([module.i, "/*== Customize Checkbox ==*/\n.control-checkbox---OXP52 {\n  display: inline-block;\n  margin-right: 8px;\n}\n.control-checkbox---OXP52 .input-checkbox----ctQ9 {\n  display: none;\n}\n.control-checkbox---OXP52 .control-indicator---1RE7K {\n  display: inline-block;\n  vertical-align: middle;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K {\n  content: \"\";\n  display: inline-block;\n  background: url(" + __webpack_require__("../images/icon/component_checkbox.png") + ") no-repeat -1px 0;\n  width: 16px;\n  height: 16px;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -41px 0;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -101px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K {\n  background-position: -21px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -61px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -121px 0;\n}\n.input-checkbox----ctQ9:not(:checked):not(:indeterminate):disabled + .control-indicator---1RE7K {\n  background-position: -81px 0;\n}\n.input-checkbox----ctQ9:disabled + .control-indicator---1RE7K {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:checked:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n.input-checkbox----ctQ9:not(:checked):indeterminate:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -562,8 +613,6 @@ exports.locals = {
 	"inputCheckbox": "input-checkbox----ctQ9",
 	"control-indicator": "control-indicator---1RE7K",
 	"controlIndicator": "control-indicator---1RE7K",
-	"control-text": "control-text---1nZAA",
-	"controlText": "control-text---1nZAA",
 	"disabled": "disabled---3l4Hc"
 };
 
@@ -581,80 +630,80 @@ exports.push([module.i, ".container-fluid---2Brsk {\n  padding-right: 15px;\n  p
 
 // exports
 exports.locals = {
+	"dropdown-menu": "dropdown-menu---1e_zi",
+	"dropdownMenu": "dropdown-menu---1e_zi",
+	"navbar-fixed-top": "navbar-fixed-top---1gjqn",
+	"navbarFixedTop": "navbar-fixed-top---1gjqn",
+	"icon-bar": "icon-bar---3seAt",
+	"iconBar": "icon-bar---3seAt",
+	"has-feedback": "has-feedback---_1-sR",
+	"hasFeedback": "has-feedback---_1-sR",
+	"navbar-nav": "navbar-nav---1bmvb",
+	"navbarNav": "navbar-nav---1bmvb",
+	"input-group": "input-group---2fmg-",
+	"inputGroup": "input-group---2fmg-",
+	"navbar-form": "navbar-form---1sg2L",
+	"navbarForm": "navbar-form---1sg2L",
+	"input-group-btn": "input-group-btn---8c2e1",
+	"inputGroupBtn": "input-group-btn---8c2e1",
+	"navbar": "navbar---3CgcW",
+	"navbar-link": "navbar-link---3Hly8",
+	"navbarLink": "navbar-link---3Hly8",
+	"container": "container---2j6jX",
 	"container-fluid": "container-fluid---2Brsk",
 	"containerFluid": "container-fluid---2Brsk",
-	"sr-only": "sr-only---2yAEF",
-	"srOnly": "sr-only---2yAEF",
-	"collapse": "collapse---20hv3",
 	"in": "in---ZKaSV",
+	"navbar-toggle": "navbar-toggle---2VPJp",
+	"navbarToggle": "navbar-toggle---2VPJp",
+	"navbar-static-top": "navbar-static-top---1XJMz",
+	"navbarStaticTop": "navbar-static-top---1XJMz",
 	"nav": "nav---DwEvZ",
-	"navbar": "navbar---3CgcW",
+	"navbar-brand": "navbar-brand---1HEM4",
+	"navbarBrand": "navbar-brand---1HEM4",
+	"navbar-btn": "navbar-btn---29Q8O",
+	"navbarBtn": "navbar-btn---29Q8O",
+	"input-group-addon": "input-group-addon---fOpQR",
+	"inputGroupAddon": "input-group-addon---fOpQR",
+	"dropdown-header": "dropdown-header---1ghdi",
+	"dropdownHeader": "dropdown-header---1ghdi",
+	"btn-sm": "btn-sm---2ZnkM",
+	"btnSm": "btn-sm---2ZnkM",
+	"btn-link": "btn-link---2eykm",
+	"btnLink": "btn-link---2eykm",
+	"form-group": "form-group---377uy",
+	"formGroup": "form-group---377uy",
+	"navbar-right": "navbar-right---3KZRg",
+	"navbarRight": "navbar-right---3KZRg",
+	"navbar-fixed-bottom": "navbar-fixed-bottom---2eN_k",
+	"navbarFixedBottom": "navbar-fixed-bottom---2eN_k",
+	"disabled": "disabled---1KUsN",
+	"checkbox": "checkbox---JEaqS",
+	"form-control-static": "form-control-static---6Jy2E",
+	"formControlStatic": "form-control-static---6Jy2E",
+	"form-control-feedback": "form-control-feedback---SMwWY",
+	"formControlFeedback": "form-control-feedback---SMwWY",
+	"btn-xs": "btn-xs---1Kfje",
+	"btnXs": "btn-xs---1Kfje",
+	"active": "active---292aa",
 	"navbar-header": "navbar-header---13JWC",
 	"navbarHeader": "navbar-header---13JWC",
 	"navbar-collapse": "navbar-collapse---3PeuQ",
 	"navbarCollapse": "navbar-collapse---3PeuQ",
-	"navbar-fixed-top": "navbar-fixed-top---1gjqn",
-	"navbarFixedTop": "navbar-fixed-top---1gjqn",
-	"navbar-static-top": "navbar-static-top---1XJMz",
-	"navbarStaticTop": "navbar-static-top---1XJMz",
-	"navbar-fixed-bottom": "navbar-fixed-bottom---2eN_k",
-	"navbarFixedBottom": "navbar-fixed-bottom---2eN_k",
-	"container": "container---2j6jX",
-	"navbar-brand": "navbar-brand---1HEM4",
-	"navbarBrand": "navbar-brand---1HEM4",
-	"navbar-toggle": "navbar-toggle---2VPJp",
-	"navbarToggle": "navbar-toggle---2VPJp",
-	"icon-bar": "icon-bar---3seAt",
-	"iconBar": "icon-bar---3seAt",
-	"navbar-nav": "navbar-nav---1bmvb",
-	"navbarNav": "navbar-nav---1bmvb",
-	"open": "open---3Nl4h",
-	"dropdown-menu": "dropdown-menu---1e_zi",
-	"dropdownMenu": "dropdown-menu---1e_zi",
-	"dropdown-header": "dropdown-header---1ghdi",
-	"dropdownHeader": "dropdown-header---1ghdi",
-	"navbar-form": "navbar-form---1sg2L",
-	"navbarForm": "navbar-form---1sg2L",
-	"form-group": "form-group---377uy",
-	"formGroup": "form-group---377uy",
-	"form-control": "form-control---17agB",
-	"formControl": "form-control---17agB",
-	"form-control-static": "form-control-static---6Jy2E",
-	"formControlStatic": "form-control-static---6Jy2E",
-	"input-group": "input-group---2fmg-",
-	"inputGroup": "input-group---2fmg-",
-	"input-group-addon": "input-group-addon---fOpQR",
-	"inputGroupAddon": "input-group-addon---fOpQR",
-	"input-group-btn": "input-group-btn---8c2e1",
-	"inputGroupBtn": "input-group-btn---8c2e1",
-	"control-label": "control-label---2PlSB",
-	"controlLabel": "control-label---2PlSB",
-	"radio": "radio---16q6i",
-	"checkbox": "checkbox---JEaqS",
-	"has-feedback": "has-feedback---_1-sR",
-	"hasFeedback": "has-feedback---_1-sR",
-	"form-control-feedback": "form-control-feedback---SMwWY",
-	"formControlFeedback": "form-control-feedback---SMwWY",
-	"navbar-btn": "navbar-btn---29Q8O",
-	"navbarBtn": "navbar-btn---29Q8O",
-	"btn-sm": "btn-sm---2ZnkM",
-	"btnSm": "btn-sm---2ZnkM",
-	"btn-xs": "btn-xs---1Kfje",
-	"btnXs": "btn-xs---1Kfje",
 	"navbar-text": "navbar-text---2gvDM",
 	"navbarText": "navbar-text---2gvDM",
 	"navbar-left": "navbar-left---_8Mhm",
 	"navbarLeft": "navbar-left---_8Mhm",
-	"navbar-right": "navbar-right---3KZRg",
-	"navbarRight": "navbar-right---3KZRg",
+	"control-label": "control-label---2PlSB",
+	"controlLabel": "control-label---2PlSB",
+	"radio": "radio---16q6i",
+	"collapse": "collapse---20hv3",
 	"navbar-default": "navbar-default---1yc1S",
 	"navbarDefault": "navbar-default---1yc1S",
-	"active": "active---292aa",
-	"disabled": "disabled---1KUsN",
-	"navbar-link": "navbar-link---3Hly8",
-	"navbarLink": "navbar-link---3Hly8",
-	"btn-link": "btn-link---2eykm",
-	"btnLink": "btn-link---2eykm"
+	"sr-only": "sr-only---2yAEF",
+	"srOnly": "sr-only---2yAEF",
+	"form-control": "form-control---17agB",
+	"formControl": "form-control---17agB",
+	"open": "open---3Nl4h"
 };
 
 /***/ }),
@@ -22377,7 +22426,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _class, _temp;
+var _class, _temp2;
 
 var _react = __webpack_require__("../node_modules/react/index.js");
 
@@ -22390,6 +22439,10 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _classnames = __webpack_require__("../node_modules/classnames/index.js");
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _chainedFunction = __webpack_require__("../node_modules/chained-function/lib/index.js");
+
+var _chainedFunction2 = _interopRequireDefault(_chainedFunction);
 
 var _index = __webpack_require__("../src/index.styl");
 
@@ -22407,57 +22460,90 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Checkbox = (_temp = _class = function (_PureComponent) {
+var Checkbox = (_temp2 = _class = function (_PureComponent) {
     _inherits(Checkbox, _PureComponent);
 
     function Checkbox() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, Checkbox);
 
-        return _possibleConstructorReturn(this, (Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).call.apply(_ref, [this].concat(args))), _this), _this.fields = {
+            checkbox: null
+        }, _this.actions = {
+            onChange: function onChange() {
+                if (typeof _this.props.indeterminate !== 'undefined') {
+                    _this.fields.checkbox.indeterminate = _this.props.indeterminate;
+                }
+            }
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Checkbox, [{
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var _props = this.props,
                 className = _props.className,
-                children = _props.children,
+                defaultChecked = _props.defaultChecked,
                 disabled = _props.disabled,
-                indeterminate = _props.indeterminate,
-                text = _props.text,
-                props = _objectWithoutProperties(_props, ['className', 'children', 'disabled', 'indeterminate', 'text']);
+                defaultIndeterminate = _props.defaultIndeterminate,
+                props = _objectWithoutProperties(_props, ['className', 'defaultChecked', 'disabled', 'defaultIndeterminate']);
+
+            var onChange = props.onChange || function () {};
+            delete props.onChange;
+            delete props.indeterminate;
 
             return _react2.default.createElement(
-                'label',
+                'div',
                 {
-                    className: (0, _classnames2.default)(className, _index2.default.controlCheckbox, _defineProperty({}, _index2.default.disabled, disabled))
+                    className: (0, _classnames2.default)(className, _index2.default['control-checkbox'], _defineProperty({}, _index2.default.disabled, disabled))
                 },
                 _react2.default.createElement('input', _extends({}, props, {
                     type: 'checkbox',
+                    defaultChecked: defaultChecked,
                     disabled: disabled,
-                    className: _index2.default.inputCheckbox,
-                    ref: function ref(el) {
-                        return el && (el.indeterminate = indeterminate);
-                    }
+                    className: _index2.default['input-checkbox'],
+                    ref: function ref(node) {
+                        _this2.fields.checkbox = node;
+                        var indeterminate = typeof _this2.props.indeterminate !== 'undefined' ? _this2.props.indeterminate : defaultIndeterminate;
+                        node && (_this2.fields.checkbox.indeterminate = indeterminate);
+                    },
+                    onChange: (0, _chainedFunction2.default)(this.actions.onChange, onChange)
                 })),
-                _react2.default.createElement('i', { className: _index2.default.controlIndicator }),
-                _react2.default.createElement(
-                    'span',
-                    { className: _index2.default.controlText },
-                    text
-                ),
-                children
+                _react2.default.createElement('i', { className: _index2.default['control-indicator'] })
             );
+        }
+    }, {
+        key: 'checked',
+        get: function get() {
+            return this.fields.checkbox.checked;
+        }
+    }, {
+        key: 'indeterminate',
+        get: function get() {
+            return this.fields.checkbox.indeterminate;
         }
     }]);
 
     return Checkbox;
 }(_react.PureComponent), _class.propTypes = {
-    checked: _propTypes2.default.bool,
+    defaultChecked: _propTypes2.default.bool,
     disabled: _propTypes2.default.bool,
     indeterminate: _propTypes2.default.bool,
-    text: _propTypes2.default.string
-}, _temp);
+    defaultIndeterminate: _propTypes2.default.bool
+}, _class.defaultProps = {
+    defaultChecked: false,
+    disabled: false,
+    defaultIndeterminate: false
+}, _temp2);
 exports.default = Checkbox;
 
 /***/ }),
@@ -22750,6 +22836,8 @@ __webpack_require__("../node_modules/trendmicro-ui/dist/css/trendmicro-ui.css");
 
 __webpack_require__("../node_modules/@trendmicro/react-buttons/dist/react-buttons.css");
 
+var _reactButtons = __webpack_require__("../node_modules/@trendmicro/react-buttons/lib/index.js");
+
 var _react = __webpack_require__("../node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
@@ -22776,20 +22864,85 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint no-alert: 0 */
+
+
+var htmlIndeterminate = false;
+var htmlChecked = false;
+var indeterminate = false;
+var checked = false;
+var indeterminate2 = false;
+var checked2 = false;
 
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
     function App() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, App);
 
-        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            htmlIndeterminate: htmlIndeterminate,
+            indeterminate: indeterminate,
+            indeterminate2: indeterminate2,
+            htmlCheckboxStstus: 'checked: ' + htmlChecked + ', indeterminate: ' + htmlIndeterminate,
+            checkboxStatus: 'checked: ' + checked + ', indeterminate: ' + indeterminate,
+            checkboxStatus2: 'checked: ' + checked2 + ', indeterminate: ' + indeterminate2
+        }, _this.fields = {
+            htmlCheckbox: null,
+            checkbox: null
+        }, _this.actions = {
+            buildStatusMessage: function buildStatusMessage(node) {
+                if (!node) {
+                    return null;
+                }
+
+                return 'checked: ' + node.checked + ', indeterminate: ' + node.indeterminate;
+            },
+            setHtmlCheckboxIndeterminate: function setHtmlCheckboxIndeterminate() {
+                _this.fields.htmlCheckbox && (_this.fields.htmlCheckbox.indeterminate = true);
+                _this.setState({
+                    htmlIndeterminate: true
+                }, function () {
+                    _this.setState({
+                        htmlCheckboxStstus: _this.actions.buildStatusMessage(_this.fields.htmlCheckbox)
+                    });
+                });
+            },
+            setCheckboxIndeterminate: function setCheckboxIndeterminate() {
+                _this.setState({
+                    indeterminate: true
+                }, function () {
+                    _this.setState({
+                        checkboxStatus: _this.actions.buildStatusMessage(_this.fields.checkbox)
+                    });
+                });
+            },
+            setCheckbox2Indeterminate: function setCheckbox2Indeterminate(isIndeterminate) {
+                var indeterminate = typeof isIndeterminate !== 'undefined' ? isIndeterminate : true;
+                _this.setState({
+                    indeterminate2: indeterminate
+                }, function () {
+                    _this.setState({
+                        checkboxStatus2: _this.actions.buildStatusMessage(_this.fields.checkbox2)
+                    });
+                });
+            }
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(App, [{
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var name = 'React Checkbox';
             var url = 'https://github.com/trendmicro-frontend/react-checkbox';
 
@@ -22898,12 +23051,42 @@ var App = function (_React$Component) {
                                     null,
                                     'React Checkbox'
                                 ),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Normal' }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Checked', defaultChecked: true }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Partial checked', indeterminate: true }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Partial checked disabled', indeterminate: true, disabled: true }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Checked disabled', defaultChecked: true, disabled: true }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', text: 'Disabled', disabled: true })
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, null),
+                                    'Normal'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, { defaultChecked: true }),
+                                    'Checked'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, { defaultIndeterminate: true }),
+                                    'Partial checked'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox disabled' },
+                                    _react2.default.createElement(_src2.default, { defaultIndeterminate: true, disabled: true }),
+                                    'Partial checked disabled'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox disabled' },
+                                    _react2.default.createElement(_src2.default, { defaultChecked: true, disabled: true }),
+                                    'Checked disabled'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox disabled' },
+                                    _react2.default.createElement(_src2.default, { disabled: true }),
+                                    'Disabled'
+                                )
                             )
                         )
                     ),
@@ -22977,12 +23160,29 @@ var App = function (_React$Component) {
                                     null,
                                     'React Checkbox'
                                 ),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', name: 'default2', text: 'Normal label one' }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', name: 'default2', text: 'Normal label two' }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox', name: 'default2', text: 'Disabled label', disabled: true }),
                                 _react2.default.createElement(
-                                    _src2.default,
-                                    { className: 'checkbox', name: 'default2', text: 'Checked label', defaultChecked: true },
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, { name: 'default2' }),
+                                    'Normal label one'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, { name: 'default2' }),
+                                    'Normal label two'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, { name: 'default2', disabled: true }),
+                                    'Disabled label'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, { name: 'default2', defaultChecked: true }),
+                                    'Checked label',
                                     _react2.default.createElement(
                                         'div',
                                         null,
@@ -23051,9 +23251,187 @@ var App = function (_React$Component) {
                                     null,
                                     'React Checkbox'
                                 ),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox-inline', name: 'inline2', text: 'Normal label' }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox-inline', name: 'inline2', text: 'Disabled label', disabled: true }),
-                                _react2.default.createElement(_src2.default, { className: 'checkbox-inline', name: 'inline2', text: 'Checked label', defaultChecked: true })
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox-inline' },
+                                    _react2.default.createElement(_src2.default, { name: 'inline2' }),
+                                    'Normal label'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox-inline disabled' },
+                                    _react2.default.createElement(_src2.default, { name: 'inline2', disabled: true }),
+                                    'Disabled label'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox-inline' },
+                                    _react2.default.createElement(_src2.default, { name: 'inline2', defaultChecked: true }),
+                                    'Checked label'
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-md-12' },
+                        _react2.default.createElement(
+                            _Section2.default,
+                            { className: 'row-md-3' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-12' },
+                                _react2.default.createElement(
+                                    'h5',
+                                    null,
+                                    'Get checked and indeterminate status'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-6' },
+                                _react2.default.createElement(
+                                    'h6',
+                                    null,
+                                    'HTML Checkbox'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement('input', {
+                                        type: 'checkbox',
+                                        ref: function ref(node) {
+                                            _this2.fields.htmlCheckbox = node;
+                                        },
+                                        onChange: function onChange() {
+                                            _this2.setState({
+                                                htmlCheckboxStstus: _this2.actions.buildStatusMessage(_this2.fields.htmlCheckbox)
+                                            });
+                                        }
+                                    }),
+                                    'Click me. ',
+                                    this.state.htmlCheckboxStstus
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    null,
+                                    _react2.default.createElement(
+                                        _reactButtons.Button,
+                                        {
+                                            onClick: this.actions.setHtmlCheckboxIndeterminate
+                                        },
+                                        'Set indeterminate to true'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-6' },
+                                _react2.default.createElement(
+                                    'h6',
+                                    null,
+                                    'React Checkbox with defaultIndeterminate'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, {
+                                        ref: function ref(node) {
+                                            _this2.fields.checkbox = node;
+                                        },
+                                        defaultChecked: checked,
+                                        defaultIndeterminate: this.state.indeterminate,
+                                        onClick: function onClick() {
+                                            _this2.setState({
+                                                indeterminate: false
+                                            });
+                                        },
+                                        onChange: function onChange() {
+                                            _this2.setState({
+                                                checkboxStatus: _this2.actions.buildStatusMessage(_this2.fields.checkbox)
+                                            });
+                                        }
+                                    }),
+                                    'Click me. ',
+                                    this.state.checkboxStatus
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    null,
+                                    _react2.default.createElement(
+                                        _reactButtons.Button,
+                                        {
+                                            onClick: this.actions.setCheckboxIndeterminate
+                                        },
+                                        'Set indeterminate to true'
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-md-12' },
+                        _react2.default.createElement(
+                            _Section2.default,
+                            { className: 'row-md-3' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-12' },
+                                _react2.default.createElement(
+                                    'h5',
+                                    null,
+                                    'Set fixed indeterminate status (Do not change by click)'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-6' },
+                                _react2.default.createElement(
+                                    'h6',
+                                    null,
+                                    'React Checkbox with indeterminate'
+                                ),
+                                _react2.default.createElement(
+                                    'label',
+                                    { className: 'checkbox' },
+                                    _react2.default.createElement(_src2.default, {
+                                        ref: function ref(node) {
+                                            _this2.fields.checkbox2 = node;
+                                        },
+                                        defaultChecked: checked2,
+                                        indeterminate: this.state.indeterminate2,
+                                        onChange: function onChange() {
+                                            _this2.setState({
+                                                checkboxStatus2: _this2.actions.buildStatusMessage(_this2.fields.checkbox2)
+                                            });
+                                        }
+                                    }),
+                                    'Click me. ',
+                                    this.state.checkboxStatus2
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    null,
+                                    _react2.default.createElement(
+                                        _reactButtons.Button,
+                                        {
+                                            onClick: function onClick() {
+                                                _this2.actions.setCheckbox2Indeterminate();
+                                            }
+                                        },
+                                        'Set indeterminate to true'
+                                    ),
+                                    _react2.default.createElement(
+                                        _reactButtons.Button,
+                                        {
+                                            onClick: function onClick() {
+                                                _this2.actions.setCheckbox2Indeterminate(false);
+                                            }
+                                        },
+                                        'Set indeterminate to false'
+                                    )
+                                )
                             )
                         )
                     )
@@ -23070,4 +23448,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?6e4b8bad12e2f0ab007a
+//# sourceMappingURL=bundle.js.map?db09dbae4bcc29472da3

@@ -1,12 +1,76 @@
+/* eslint no-alert: 0 */
 import 'trendmicro-ui/dist/css/trendmicro-ui.css';
 import '@trendmicro/react-buttons/dist/react-buttons.css';
+import { Button } from '@trendmicro/react-buttons';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './Navbar';
 import Section from './Section';
 import Checkbox from '../src';
 
+const htmlIndeterminate = false;
+const htmlChecked = false;
+const indeterminate = false;
+const checked = false;
+const indeterminate2 = false;
+const checked2 = false;
+
 class App extends React.Component {
+    state = {
+        htmlIndeterminate: htmlIndeterminate,
+        indeterminate: indeterminate,
+        indeterminate2: indeterminate2,
+        htmlCheckboxStstus: 'checked: ' + htmlChecked + ', indeterminate: ' + htmlIndeterminate,
+        checkboxStatus: 'checked: ' + checked + ', indeterminate: ' + indeterminate,
+        checkboxStatus2: 'checked: ' + checked2 + ', indeterminate: ' + indeterminate2
+    }
+
+    fields = {
+        htmlCheckbox: null,
+        checkbox: null
+    };
+
+    actions = {
+        buildStatusMessage: (node) => {
+            if (!node) {
+                return null;
+            }
+
+            return (
+                'checked: ' + node.checked + ', indeterminate: ' + node.indeterminate
+            );
+        },
+        setHtmlCheckboxIndeterminate: () => {
+            this.fields.htmlCheckbox && (this.fields.htmlCheckbox.indeterminate = true);
+            this.setState({
+                htmlIndeterminate: true
+            }, () => {
+                this.setState({
+                    htmlCheckboxStstus: this.actions.buildStatusMessage(this.fields.htmlCheckbox)
+                });
+            });
+        },
+        setCheckboxIndeterminate: () => {
+            this.setState({
+                indeterminate: true
+            }, () => {
+                this.setState({
+                    checkboxStatus: this.actions.buildStatusMessage(this.fields.checkbox)
+                });
+            });
+        },
+        setCheckbox2Indeterminate: (isIndeterminate) => {
+            const indeterminate = typeof (isIndeterminate) !== 'undefined' ? isIndeterminate : true;
+            this.setState({
+                indeterminate2: indeterminate
+            }, () => {
+                this.setState({
+                    checkboxStatus2: this.actions.buildStatusMessage(this.fields.checkbox2)
+                });
+            });
+        }
+    }
+
     render() {
         const name = 'React Checkbox';
         const url = 'https://github.com/trendmicro-frontend/react-checkbox';
@@ -55,12 +119,30 @@ class App extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <Checkbox className="checkbox" text="Normal" />
-                                <Checkbox className="checkbox" text="Checked" defaultChecked />
-                                <Checkbox className="checkbox" text="Partial checked" indeterminate />
-                                <Checkbox className="checkbox" text="Partial checked disabled" indeterminate disabled />
-                                <Checkbox className="checkbox" text="Checked disabled" defaultChecked disabled />
-                                <Checkbox className="checkbox" text="Disabled" disabled />
+                                <label className="checkbox">
+                                    <Checkbox />
+                                    Normal
+                                </label>
+                                <label className="checkbox">
+                                    <Checkbox defaultChecked />
+                                    Checked
+                                </label>
+                                <label className="checkbox">
+                                    <Checkbox defaultIndeterminate />
+                                    Partial checked
+                                </label>
+                                <label className="checkbox disabled">
+                                    <Checkbox defaultIndeterminate disabled />
+                                    Partial checked disabled
+                                </label>
+                                <label className="checkbox disabled">
+                                    <Checkbox defaultChecked disabled />
+                                    Checked disabled
+                                </label>
+                                <label className="checkbox disabled">
+                                    <Checkbox disabled />
+                                    Disabled
+                                </label>
                             </div>
                         </Section>
                     </div>
@@ -94,15 +176,26 @@ class App extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <Checkbox className="checkbox" name="default2" text="Normal label one" />
-                                <Checkbox className="checkbox" name="default2" text="Normal label two" />
-                                <Checkbox className="checkbox" name="default2" text="Disabled label" disabled />
-                                <Checkbox className="checkbox" name="default2" text="Checked label" defaultChecked>
+                                <label className="checkbox">
+                                    <Checkbox name="default2" />
+                                    Normal label one
+                                </label>
+                                <label className="checkbox">
+                                    <Checkbox name="default2" />
+                                    Normal label two
+                                </label>
+                                <label className="checkbox">
+                                    <Checkbox name="default2" disabled />
+                                    Disabled label
+                                </label>
+                                <label className="checkbox">
+                                    <Checkbox name="default2" defaultChecked />
+                                    Checked label
                                     <div>
                                         <div>Sed posuere consecteyur est at lobortus. Aenean eu leo quam.</div>
                                         <div>Pellentesque omare sem lacinia quam venenatis vestibulum.</div>
                                     </div>
-                                </Checkbox>
+                                </label>
                             </div>
                         </Section>
                     </div>
@@ -128,9 +221,120 @@ class App extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <Checkbox className="checkbox-inline" name="inline2" text="Normal label" />
-                                <Checkbox className="checkbox-inline" name="inline2" text="Disabled label" disabled />
-                                <Checkbox className="checkbox-inline" name="inline2" text="Checked label" defaultChecked />
+                                <label className="checkbox-inline">
+                                    <Checkbox name="inline2" />
+                                    Normal label
+                                </label>
+                                <label className="checkbox-inline disabled">
+                                    <Checkbox name="inline2" disabled />
+                                    Disabled label
+                                </label>
+                                <label className="checkbox-inline">
+                                    <Checkbox name="inline2" defaultChecked />
+                                    Checked label
+                                </label>
+                            </div>
+                        </Section>
+                    </div>
+                    <div className="col-md-12">
+                        <Section className="row-md-3">
+                            <div className="col-md-12">
+                                <h5>Get checked and indeterminate status</h5>
+                            </div>
+                            <div className="col-md-6">
+                                <h6>HTML Checkbox</h6>
+                                <label className="checkbox">
+                                    <input
+                                        type="checkbox"
+                                        ref={node => {
+                                            this.fields.htmlCheckbox = node;
+                                        }}
+                                        onChange={() => {
+                                            this.setState({
+                                                htmlCheckboxStstus: this.actions.buildStatusMessage(this.fields.htmlCheckbox)
+                                            });
+                                        }}
+                                    />
+                                    Click me. { this.state.htmlCheckboxStstus }
+                                </label>
+                                <div>
+                                    <Button
+                                        onClick={this.actions.setHtmlCheckboxIndeterminate}
+                                    >
+                                        Set indeterminate to true
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <h6>React Checkbox with defaultIndeterminate</h6>
+                                <label className="checkbox">
+                                    <Checkbox
+                                        ref={node => {
+                                            this.fields.checkbox = node;
+                                        }}
+                                        defaultChecked={checked}
+                                        defaultIndeterminate={this.state.indeterminate}
+                                        onClick={() => {
+                                            this.setState({
+                                                indeterminate: false
+                                            });
+                                        }}
+                                        onChange={() => {
+                                            this.setState({
+                                                checkboxStatus: this.actions.buildStatusMessage(this.fields.checkbox)
+                                            });
+                                        }}
+                                    />
+                                    Click me. { this.state.checkboxStatus }
+                                </label>
+                                <div>
+                                    <Button
+                                        onClick={this.actions.setCheckboxIndeterminate}
+                                    >
+                                        Set indeterminate to true
+                                    </Button>
+                                </div>
+                            </div>
+                        </Section>
+                    </div>
+                    <div className="col-md-12">
+                        <Section className="row-md-3">
+                            <div className="col-md-12">
+                                <h5>Set fixed indeterminate status (Do not change by click)</h5>
+                            </div>
+                            <div className="col-md-6">
+                                <h6>React Checkbox with indeterminate</h6>
+                                <label className="checkbox">
+                                    <Checkbox
+                                        ref={node => {
+                                            this.fields.checkbox2 = node;
+                                        }}
+                                        defaultChecked={checked2}
+                                        indeterminate={this.state.indeterminate2}
+                                        onChange={() => {
+                                            this.setState({
+                                                checkboxStatus2: this.actions.buildStatusMessage(this.fields.checkbox2)
+                                            });
+                                        }}
+                                    />
+                                    Click me. { this.state.checkboxStatus2 }
+                                </label>
+                                <div>
+                                    <Button
+                                        onClick={() => {
+                                            this.actions.setCheckbox2Indeterminate();
+                                        }}
+                                    >
+                                        Set indeterminate to true
+                                    </Button>
+                                    <Button
+                                        onClick={() => {
+                                            this.actions.setCheckbox2Indeterminate(false);
+                                        }}
+                                    >
+                                        Set indeterminate to false
+                                    </Button>
+                                </div>
                             </div>
                         </Section>
                     </div>
