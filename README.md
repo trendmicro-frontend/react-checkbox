@@ -60,10 +60,6 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 ## API
 
 ### Properties
-
-Name | Type | Default | Description
-:--- | :--- | :------ | :----------
-
 <table>
     <thead>
         <tr>
@@ -101,6 +97,27 @@ Name | Type | Default | Description
   </tbody>
 </table>
 
+<table>
+    <thead>
+        <tr>
+            <th align="left">Name</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>checked</td>
+            <td>Boolean</td>
+            <td>Get checked status</td>
+        </tr>
+        <tr>
+            <td>indeterminate</td>
+            <td>Boolean</td>
+            <td>Get indeterminate status</td>
+        </tr>
+  </tbody>
+</table>
 
 ## License
 
