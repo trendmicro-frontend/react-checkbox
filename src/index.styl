@@ -1,13 +1,19 @@
+@import "reset-context";
+
 /*== Customize Checkbox ==*/
 .control-checkbox {
-    display: inline-block;
-    margin-right: 8px;
-    
+    reset-context();
+
     .input-checkbox {
         display: none;
     }
     .control-indicator {
         display: inline-block;
+        vertical-align: middle;
+    }
+    .control-text:not(:empty) {
+        display: inline-block;
+        margin-left: 8px;
         vertical-align: middle;
     }
 }
@@ -49,6 +55,12 @@
 // Disabled
 .input-checkbox:not(:checked):not(:indeterminate):disabled + .control-indicator {
     background-position: -81px 0;
+}
+
+// Disabled - text
+.control-checkbox.disabled > .control-text {
+    opacity: .4;
+    cursor: not-allowed;
 }
 
 // Disabled - cursor

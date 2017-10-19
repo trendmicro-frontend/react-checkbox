@@ -6,14 +6,14 @@ import styles from './index.styl';
 
 class Checkbox extends PureComponent {
     static propTypes = {
-        defaultChecked: PropTypes.bool,
         disabled: PropTypes.bool,
+        checked: PropTypes.bool,
+        defaultChecked: PropTypes.bool,
         indeterminate: PropTypes.bool,
         defaultIndeterminate: PropTypes.bool
     };
 
     static defaultProps = {
-        defaultChecked: false,
         disabled: false,
         defaultIndeterminate: false
     };
@@ -41,7 +41,7 @@ class Checkbox extends PureComponent {
     render() {
         const {
             className,
-            defaultChecked,
+            children,
             disabled,
             defaultIndeterminate,
             ...props
@@ -52,7 +52,7 @@ class Checkbox extends PureComponent {
         delete props.indeterminate;
 
         return (
-            <div
+            <label
                 className={classNames(
                     className,
                     styles['control-checkbox'],
@@ -62,7 +62,6 @@ class Checkbox extends PureComponent {
                 <input
                     {...props}
                     type="checkbox"
-                    defaultChecked={defaultChecked}
                     disabled={disabled}
                     className={styles['input-checkbox']}
                     ref={node => {
@@ -76,7 +75,8 @@ class Checkbox extends PureComponent {
                     )}
                 />
                 <i className={styles['control-indicator']} />
-            </div>
+                <span className={styles.controlText}>{ children }</span>
+            </label>
         );
     }
 }

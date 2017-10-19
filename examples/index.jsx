@@ -119,30 +119,24 @@ class App extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <label className="checkbox">
-                                    <Checkbox />
+                                <Checkbox className="checkbox">
                                     Normal
-                                </label>
-                                <label className="checkbox">
-                                    <Checkbox defaultChecked />
+                                </Checkbox>
+                                <Checkbox defaultChecked>
                                     Checked
-                                </label>
-                                <label className="checkbox">
-                                    <Checkbox defaultIndeterminate />
+                                </Checkbox>
+                                <Checkbox className="checkbox" defaultIndeterminate>
                                     Partial checked
-                                </label>
-                                <label className="checkbox disabled">
-                                    <Checkbox defaultIndeterminate disabled />
+                                </Checkbox>
+                                <Checkbox className="checkbox" indeterminate disabled>
                                     Partial checked disabled
-                                </label>
-                                <label className="checkbox disabled">
-                                    <Checkbox defaultChecked disabled />
+                                </Checkbox>
+                                <Checkbox className="checkbox" checked disabled>
                                     Checked disabled
-                                </label>
-                                <label className="checkbox disabled">
-                                    <Checkbox disabled />
+                                </Checkbox>
+                                <Checkbox className="checkbox" disabled>
                                     Disabled
-                                </label>
+                                </Checkbox>
                             </div>
                         </Section>
                     </div>
@@ -176,26 +170,22 @@ class App extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <label className="checkbox">
-                                    <Checkbox name="default2" />
+                                <Checkbox className="checkbox" name="default2">
                                     Normal label one
-                                </label>
-                                <label className="checkbox">
-                                    <Checkbox name="default2" />
+                                </Checkbox>
+                                <Checkbox className="checkbox" name="default2">
                                     Normal label two
-                                </label>
-                                <label className="checkbox">
-                                    <Checkbox name="default2" disabled />
+                                </Checkbox>
+                                <Checkbox className="checkbox" name="default2" disabled>
                                     Disabled label
-                                </label>
-                                <label className="checkbox">
-                                    <Checkbox name="default2" defaultChecked />
+                                </Checkbox>
+                                <Checkbox className="checkbox" name="default2" checked>
                                     Checked label
-                                    <div>
-                                        <div>Sed posuere consecteyur est at lobortus. Aenean eu leo quam.</div>
-                                        <div>Pellentesque omare sem lacinia quam venenatis vestibulum.</div>
-                                    </div>
-                                </label>
+                                </Checkbox>
+                                <div>
+                                    <div>Sed posuere consecteyur est at lobortus. Aenean eu leo quam.</div>
+                                    <div>Pellentesque omare sem lacinia quam venenatis vestibulum.</div>
+                                </div>
                             </div>
                         </Section>
                     </div>
@@ -221,18 +211,15 @@ class App extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <h6>React Checkbox</h6>
-                                <label className="checkbox-inline">
-                                    <Checkbox name="inline2" />
+                                <Checkbox className="checkbox-inline" name="inline2">
                                     Normal label
-                                </label>
-                                <label className="checkbox-inline disabled">
-                                    <Checkbox name="inline2" disabled />
+                                </Checkbox>
+                                <Checkbox className="checkbox-inline" name="inline2" disabled>
                                     Disabled label
-                                </label>
-                                <label className="checkbox-inline">
-                                    <Checkbox name="inline2" defaultChecked />
+                                </Checkbox>
+                                <Checkbox className="checkbox-inline" name="inline2" checked>
                                     Checked label
-                                </label>
+                                </Checkbox>
                             </div>
                         </Section>
                     </div>
@@ -266,27 +253,27 @@ class App extends React.Component {
                                 </div>
                             </div>
                             <div className="col-md-6">
-                                <h6>React Checkbox with defaultIndeterminate</h6>
-                                <label className="checkbox">
-                                    <Checkbox
-                                        ref={node => {
-                                            this.fields.checkbox = node;
-                                        }}
-                                        defaultChecked={checked}
-                                        defaultIndeterminate={this.state.indeterminate}
-                                        onClick={() => {
-                                            this.setState({
-                                                indeterminate: false
-                                            });
-                                        }}
-                                        onChange={() => {
-                                            this.setState({
-                                                checkboxStatus: this.actions.buildStatusMessage(this.fields.checkbox)
-                                            });
-                                        }}
-                                    />
+                                <h6>React Checkbox</h6>
+                                <Checkbox
+                                    ref={node => {
+                                        this.fields.checkbox = node;
+                                    }}
+                                    className="checkbox"
+                                    defaultChecked={checked}
+                                    defaultIndeterminate={this.state.indeterminate}
+                                    onClick={() => {
+                                        this.setState({
+                                            indeterminate: false
+                                        });
+                                    }}
+                                    onChange={() => {
+                                        this.setState({
+                                            checkboxStatus: this.actions.buildStatusMessage(this.fields.checkbox)
+                                        });
+                                    }}
+                                >
                                     Click me. { this.state.checkboxStatus }
-                                </label>
+                                </Checkbox>
                                 <div>
                                     <Button
                                         onClick={this.actions.setCheckboxIndeterminate}
@@ -303,22 +290,22 @@ class App extends React.Component {
                                 <h5>Set fixed indeterminate status (Do not change by click)</h5>
                             </div>
                             <div className="col-md-6">
-                                <h6>React Checkbox with indeterminate</h6>
-                                <label className="checkbox">
-                                    <Checkbox
-                                        ref={node => {
-                                            this.fields.checkbox2 = node;
-                                        }}
-                                        defaultChecked={checked2}
-                                        indeterminate={this.state.indeterminate2}
-                                        onChange={() => {
-                                            this.setState({
-                                                checkboxStatus2: this.actions.buildStatusMessage(this.fields.checkbox2)
-                                            });
-                                        }}
-                                    />
+                                <h6>React Checkbox</h6>
+                                <Checkbox
+                                    ref={node => {
+                                        this.fields.checkbox2 = node;
+                                    }}
+                                    className="checkbox"
+                                    defaultChecked={checked2}
+                                    indeterminate={this.state.indeterminate2}
+                                    onChange={() => {
+                                        this.setState({
+                                            checkboxStatus2: this.actions.buildStatusMessage(this.fields.checkbox2)
+                                        });
+                                    }}
+                                >
                                     Click me. { this.state.checkboxStatus2 }
-                                </label>
+                                </Checkbox>
                                 <div>
                                     <Button
                                         onClick={() => {

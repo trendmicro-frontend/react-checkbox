@@ -603,7 +603,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, "/*== Customize Checkbox ==*/\n.control-checkbox---OXP52 {\n  display: inline-block;\n  margin-right: 8px;\n}\n.control-checkbox---OXP52 .input-checkbox----ctQ9 {\n  display: none;\n}\n.control-checkbox---OXP52 .control-indicator---1RE7K {\n  display: inline-block;\n  vertical-align: middle;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K {\n  content: \"\";\n  display: inline-block;\n  background: url(" + __webpack_require__("../images/icon/component_checkbox.png") + ") no-repeat -1px 0;\n  width: 16px;\n  height: 16px;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -41px 0;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -101px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K {\n  background-position: -21px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -61px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -121px 0;\n}\n.input-checkbox----ctQ9:not(:checked):not(:indeterminate):disabled + .control-indicator---1RE7K {\n  background-position: -81px 0;\n}\n.input-checkbox----ctQ9:disabled + .control-indicator---1RE7K {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:checked:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n.input-checkbox----ctQ9:not(:checked):indeterminate:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n", ""]);
+exports.push([module.i, "/*== Customize Checkbox ==*/\n.control-checkbox---OXP52 {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  line-height: 20px;\n}\n.control-checkbox---OXP52 *,\n.control-checkbox---OXP52 *:before,\n.control-checkbox---OXP52 *:after {\n  -webkit-box-sizing: inherit;\n  -moz-box-sizing: inherit;\n  box-sizing: inherit;\n}\n.control-checkbox---OXP52 .input-checkbox----ctQ9 {\n  display: none;\n}\n.control-checkbox---OXP52 .control-indicator---1RE7K {\n  display: inline-block;\n  vertical-align: middle;\n}\n.control-checkbox---OXP52 .control-text---1nZAA:not(:empty) {\n  display: inline-block;\n  margin-left: 8px;\n  vertical-align: middle;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K {\n  content: \"\";\n  display: inline-block;\n  background: url(" + __webpack_require__("../images/icon/component_checkbox.png") + ") no-repeat -1px 0;\n  width: 16px;\n  height: 16px;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -41px 0;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -101px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K {\n  background-position: -21px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -61px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -121px 0;\n}\n.input-checkbox----ctQ9:not(:checked):not(:indeterminate):disabled + .control-indicator---1RE7K {\n  background-position: -81px 0;\n}\n.control-checkbox---OXP52.disabled---3l4Hc > .control-text---1nZAA {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:disabled + .control-indicator---1RE7K {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:checked:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n.input-checkbox----ctQ9:not(:checked):indeterminate:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -613,6 +613,8 @@ exports.locals = {
 	"inputCheckbox": "input-checkbox----ctQ9",
 	"control-indicator": "control-indicator---1RE7K",
 	"controlIndicator": "control-indicator---1RE7K",
+	"control-text": "control-text---1nZAA",
+	"controlText": "control-text---1nZAA",
 	"disabled": "disabled---3l4Hc"
 };
 
@@ -22492,23 +22494,22 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
 
             var _props = this.props,
                 className = _props.className,
-                defaultChecked = _props.defaultChecked,
+                children = _props.children,
                 disabled = _props.disabled,
                 defaultIndeterminate = _props.defaultIndeterminate,
-                props = _objectWithoutProperties(_props, ['className', 'defaultChecked', 'disabled', 'defaultIndeterminate']);
+                props = _objectWithoutProperties(_props, ['className', 'children', 'disabled', 'defaultIndeterminate']);
 
             var onChange = props.onChange || function () {};
             delete props.onChange;
             delete props.indeterminate;
 
             return _react2.default.createElement(
-                'div',
+                'label',
                 {
                     className: (0, _classnames2.default)(className, _index2.default['control-checkbox'], _defineProperty({}, _index2.default.disabled, disabled))
                 },
                 _react2.default.createElement('input', _extends({}, props, {
                     type: 'checkbox',
-                    defaultChecked: defaultChecked,
                     disabled: disabled,
                     className: _index2.default['input-checkbox'],
                     ref: function ref(node) {
@@ -22518,7 +22519,12 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
                     },
                     onChange: (0, _chainedFunction2.default)(this.actions.onChange, onChange)
                 })),
-                _react2.default.createElement('i', { className: _index2.default['control-indicator'] })
+                _react2.default.createElement('i', { className: _index2.default['control-indicator'] }),
+                _react2.default.createElement(
+                    'span',
+                    { className: _index2.default.controlText },
+                    children
+                )
             );
         }
     }, {
@@ -22535,12 +22541,12 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
 
     return Checkbox;
 }(_react.PureComponent), _class.propTypes = {
-    defaultChecked: _propTypes2.default.bool,
     disabled: _propTypes2.default.bool,
+    checked: _propTypes2.default.bool,
+    defaultChecked: _propTypes2.default.bool,
     indeterminate: _propTypes2.default.bool,
     defaultIndeterminate: _propTypes2.default.bool
 }, _class.defaultProps = {
-    defaultChecked: false,
     disabled: false,
     defaultIndeterminate: false
 }, _temp2);
@@ -23052,39 +23058,33 @@ var App = function (_React$Component) {
                                     'React Checkbox'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
+                                    _src2.default,
                                     { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, null),
                                     'Normal'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, { defaultChecked: true }),
+                                    _src2.default,
+                                    { defaultChecked: true },
                                     'Checked'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, { defaultIndeterminate: true }),
+                                    _src2.default,
+                                    { className: 'checkbox', defaultIndeterminate: true },
                                     'Partial checked'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox disabled' },
-                                    _react2.default.createElement(_src2.default, { defaultIndeterminate: true, disabled: true }),
+                                    _src2.default,
+                                    { className: 'checkbox', indeterminate: true, disabled: true },
                                     'Partial checked disabled'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox disabled' },
-                                    _react2.default.createElement(_src2.default, { defaultChecked: true, disabled: true }),
+                                    _src2.default,
+                                    { className: 'checkbox', checked: true, disabled: true },
                                     'Checked disabled'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox disabled' },
-                                    _react2.default.createElement(_src2.default, { disabled: true }),
+                                    _src2.default,
+                                    { className: 'checkbox', disabled: true },
                                     'Disabled'
                                 )
                             )
@@ -23161,41 +23161,37 @@ var App = function (_React$Component) {
                                     'React Checkbox'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, { name: 'default2' }),
+                                    _src2.default,
+                                    { className: 'checkbox', name: 'default2' },
                                     'Normal label one'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, { name: 'default2' }),
+                                    _src2.default,
+                                    { className: 'checkbox', name: 'default2' },
                                     'Normal label two'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, { name: 'default2', disabled: true }),
+                                    _src2.default,
+                                    { className: 'checkbox', name: 'default2', disabled: true },
                                     'Disabled label'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, { name: 'default2', defaultChecked: true }),
-                                    'Checked label',
+                                    _src2.default,
+                                    { className: 'checkbox', name: 'default2', checked: true },
+                                    'Checked label'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    null,
                                     _react2.default.createElement(
                                         'div',
                                         null,
-                                        _react2.default.createElement(
-                                            'div',
-                                            null,
-                                            'Sed posuere consecteyur est at lobortus. Aenean eu leo quam.'
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            null,
-                                            'Pellentesque omare sem lacinia quam venenatis vestibulum.'
-                                        )
+                                        'Sed posuere consecteyur est at lobortus. Aenean eu leo quam.'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        null,
+                                        'Pellentesque omare sem lacinia quam venenatis vestibulum.'
                                     )
                                 )
                             )
@@ -23252,21 +23248,18 @@ var App = function (_React$Component) {
                                     'React Checkbox'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox-inline' },
-                                    _react2.default.createElement(_src2.default, { name: 'inline2' }),
+                                    _src2.default,
+                                    { className: 'checkbox-inline', name: 'inline2' },
                                     'Normal label'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox-inline disabled' },
-                                    _react2.default.createElement(_src2.default, { name: 'inline2', disabled: true }),
+                                    _src2.default,
+                                    { className: 'checkbox-inline', name: 'inline2', disabled: true },
                                     'Disabled label'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox-inline' },
-                                    _react2.default.createElement(_src2.default, { name: 'inline2', defaultChecked: true }),
+                                    _src2.default,
+                                    { className: 'checkbox-inline', name: 'inline2', checked: true },
                                     'Checked label'
                                 )
                             )
@@ -23330,15 +23323,15 @@ var App = function (_React$Component) {
                                 _react2.default.createElement(
                                     'h6',
                                     null,
-                                    'React Checkbox with defaultIndeterminate'
+                                    'React Checkbox'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, {
+                                    _src2.default,
+                                    {
                                         ref: function ref(node) {
                                             _this2.fields.checkbox = node;
                                         },
+                                        className: 'checkbox',
                                         defaultChecked: checked,
                                         defaultIndeterminate: this.state.indeterminate,
                                         onClick: function onClick() {
@@ -23351,7 +23344,7 @@ var App = function (_React$Component) {
                                                 checkboxStatus: _this2.actions.buildStatusMessage(_this2.fields.checkbox)
                                             });
                                         }
-                                    }),
+                                    },
                                     'Click me. ',
                                     this.state.checkboxStatus
                                 ),
@@ -23390,15 +23383,15 @@ var App = function (_React$Component) {
                                 _react2.default.createElement(
                                     'h6',
                                     null,
-                                    'React Checkbox with indeterminate'
+                                    'React Checkbox'
                                 ),
                                 _react2.default.createElement(
-                                    'label',
-                                    { className: 'checkbox' },
-                                    _react2.default.createElement(_src2.default, {
+                                    _src2.default,
+                                    {
                                         ref: function ref(node) {
                                             _this2.fields.checkbox2 = node;
                                         },
+                                        className: 'checkbox',
                                         defaultChecked: checked2,
                                         indeterminate: this.state.indeterminate2,
                                         onChange: function onChange() {
@@ -23406,7 +23399,7 @@ var App = function (_React$Component) {
                                                 checkboxStatus2: _this2.actions.buildStatusMessage(_this2.fields.checkbox2)
                                             });
                                         }
-                                    }),
+                                    },
                                     'Click me. ',
                                     this.state.checkboxStatus2
                                 ),
@@ -23448,4 +23441,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?db09dbae4bcc29472da3
+//# sourceMappingURL=bundle.js.map?9cd778d32d0c4c02237c

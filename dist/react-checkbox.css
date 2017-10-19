@@ -1,14 +1,28 @@
-/*! react-checkbox v2.0.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-checkbox */
+/*! react-checkbox v2.1.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-checkbox */
 /*== Customize Checkbox ==*/
 .checkbox---control-checkbox---2Mo4k {
-  display: inline-block;
-  margin-right: 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 20px;
+}
+.checkbox---control-checkbox---2Mo4k *,
+.checkbox---control-checkbox---2Mo4k *:before,
+.checkbox---control-checkbox---2Mo4k *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 .checkbox---control-checkbox---2Mo4k .checkbox---input-checkbox---3hbfZ {
   display: none;
 }
 .checkbox---control-checkbox---2Mo4k .checkbox---control-indicator---dcwXW {
   display: inline-block;
+  vertical-align: middle;
+}
+.checkbox---control-checkbox---2Mo4k .checkbox---control-text---3IJSz:not(:empty) {
+  display: inline-block;
+  margin-left: 8px;
   vertical-align: middle;
 }
 .checkbox---input-checkbox---3hbfZ + .checkbox---control-indicator---dcwXW {
@@ -35,6 +49,12 @@
 }
 .checkbox---input-checkbox---3hbfZ:not(:checked):not(:indeterminate):disabled + .checkbox---control-indicator---dcwXW {
   background-position: -81px 0;
+}
+.checkbox---control-checkbox---2Mo4k.checkbox---disabled---eCY9b > .checkbox---control-text---3IJSz {
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
+  cursor: not-allowed;
 }
 .checkbox---input-checkbox---3hbfZ:disabled + .checkbox---control-indicator---dcwXW {
   cursor: not-allowed;

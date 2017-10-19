@@ -32,28 +32,30 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 // Checked
 <Checkbox defaultChecked />
 
+// Force checked
+<Checkbox checked />
+
 // Partial checked
 <Checkbox defaultIndeterminate />
 
-// Partial checked. Fixed indeterminate status (Do not change by click)
+// Partial checked. Force indeterminate status (Do not change by click)
 <Checkbox indeterminate />
 
 // Disabled
 <Checkbox disabled />
 
 // With Label
-<label className="checkbox">
-    <Checkbox />
+<Checkbox>
     Normal
-</label>
+</Checkbox>
 
-// Get checkbox checked status
-<Checkbox 
+// Get checked status of checkbox by this.checkbox.checked
+// Get indeterminate status of checkbox by this.checkbox.indeterminate
+<Checkbox
     ref={node => {
         this.checkbox = node;
     }}
 />
-// Get checked status by this.checkbox.checked
 ```
 
 
@@ -73,8 +75,14 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
         <tr>
             <td>defaultChecked</td>
             <td>Boolean</td>
-            <td>false</td>
+            <td></td>
             <td>Specify default checked status for checkbox</td>
+        </tr>
+        <tr>
+            <td>checked</td>
+            <td>Boolean</td>
+            <td></td>
+            <td>Force checked status for checkbox</td>
         </tr>
         <tr>
             <td>defaultIndeterminate</td>
@@ -85,7 +93,7 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
         <tr>
             <td>indeterminate</td>
             <td>Boolean</td>
-            <td>false</td>
+            <td></td>
             <td>Force indeterminate status for checkbox</td>
         </tr>
         <tr>
