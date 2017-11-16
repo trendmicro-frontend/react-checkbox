@@ -46,6 +46,7 @@
     "react": "^0.14.0 || >=15.0.0"
   },
   "dependencies": {
+    "chained-function": "^0.5.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8"
   },
@@ -63,7 +64,6 @@
     "clean-css-cli": "~4.0.12",
     "coveralls": "~2.13.0",
     "css-loader": "~0.28.0",
-    "chained-function": "~0.5.0",
     "eslint": "~3.19.0",
     "eslint-config-trendmicro": "~0.5.1",
     "eslint-loader": "~1.7.1",
