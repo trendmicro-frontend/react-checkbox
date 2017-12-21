@@ -1,10 +1,13 @@
-/*! react-checkbox v2.1.1 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-checkbox */
-/*== Customize Checkbox ==*/
+/*! react-checkbox v3.0.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-checkbox */
 .checkbox---control-checkbox---2Mo4k {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   line-height: 20px;
+  min-height: 20px;
+  padding: 0;
+  margin-bottom: 0;
+  cursor: pointer;
 }
 .checkbox---control-checkbox---2Mo4k *,
 .checkbox---control-checkbox---2Mo4k *:before,
@@ -20,10 +23,10 @@
   display: inline-block;
   vertical-align: middle;
 }
-.checkbox---control-checkbox---2Mo4k .checkbox---control-text---3IJSz:not(:empty) {
+.checkbox---control-checkbox---2Mo4k .checkbox---text-label---2D19D:not(:empty) {
   display: inline-block;
-  margin-left: 8px;
   vertical-align: middle;
+  margin-left: 8px;
 }
 .checkbox---input-checkbox---3hbfZ + .checkbox---control-indicator---dcwXW {
   content: "";
