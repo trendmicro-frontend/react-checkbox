@@ -34,13 +34,13 @@ The label prop is optional, you can use children to pass through the component.
 ```jsx
 <Checkbox label="Checkbox label">
     <p style={{ marginLeft: 24 }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet...
     </p>
 </Checkbox>
 
 <Checkbox>
     <span style={{ verticalAlign: 'middle', marginLeft: 8 }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet...
     </span>
 </Checkbox>
 ```
@@ -73,8 +73,8 @@ Name | Type | Default | Description
 :--- | :--- | :------ | :----------
 children | any | | Children to pass through the component.
 label | Node or String | | Text label to attach next to the checkbox element.
-labelClassName | | Customized class name for the text label.
-labelStyle | | Customized style for the text label.
+labelClassName | Object | | Customized class name for the text label.
+labelStyle | Object | | Customized style for the text label.
 disabled | Boolean | false | If true, the checkbox shown as disabled and cannot be modified.
 checked | Boolean | | The checked state of the checkbox element.
 defaultChecked | Boolean | | The default checked state of the checkbox element.
