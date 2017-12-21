@@ -1,8 +1,12 @@
 @import "reset-context";
 
-/*== Customize Checkbox ==*/
 .control-checkbox {
     reset-context();
+
+    min-height: 20px;
+    padding: 0;
+    margin-bottom: 0;
+    cursor: pointer;
 
     .input-checkbox {
         display: none;
@@ -11,10 +15,10 @@
         display: inline-block;
         vertical-align: middle;
     }
-    .control-text:not(:empty) {
+    .text-label:not(:empty) {
         display: inline-block;
-        margin-left: 8px;
         vertical-align: middle;
+        margin-left: 8px;
     }
 }
 

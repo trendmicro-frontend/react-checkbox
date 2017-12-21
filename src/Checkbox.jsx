@@ -1,11 +1,17 @@
+import cx from 'classnames';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import chainedFunction from 'chained-function';
 import styles from './index.styl';
 
 class Checkbox extends PureComponent {
     static propTypes = {
+        label: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.node
+        ]),
+        labelClassName: PropTypes.object,
+        labelStyle: PropTypes.object,
         disabled: PropTypes.bool,
         checked: PropTypes.bool,
         defaultChecked: PropTypes.bool,
@@ -18,32 +24,35 @@ class Checkbox extends PureComponent {
         defaultIndeterminate: false
     };
 
-    fields = {
-        checkbox: null
-    };
+    checkbox = null;
 
     get checked() {
-        return this.fields.checkbox.checked;
+        return this.checkbox.checked;
     }
 
     get indeterminate() {
-        return this.fields.checkbox.indeterminate;
+        return this.checkbox.indeterminate;
     }
 
     actions = {
         onChange: () => {
             if (typeof (this.props.indeterminate) !== 'undefined') {
-                this.fields.checkbox.indeterminate = this.props.indeterminate;
+                this.checkbox.indeterminate = this.props.indeterminate;
             }
         }
     }
 
     render() {
         const {
-            className,
-            children,
+            label,
+            labelClassName,
+            labelStyle,
             disabled,
             defaultIndeterminate,
+
+            // Default props
+            className,
+            children,
             ...props
         } = this.props;
 
@@ -51,11 +60,13 @@ class Checkbox extends PureComponent {
         delete props.onChange;
         delete props.indeterminate;
 
+        console.log('### label:', label);
+
         return (
             <label
-                className={classNames(
+                className={cx(
                     className,
-                    styles['control-checkbox'],
+                    styles.controlCheckbox,
                     { [styles.disabled]: disabled }
                 )}
             >
@@ -63,19 +74,20 @@ class Checkbox extends PureComponent {
                     {...props}
                     type="checkbox"
                     disabled={disabled}
-                    className={styles['input-checkbox']}
+                    className={styles.inputCheckbox}
                     ref={node => {
-                        this.fields.checkbox = node;
+                        this.checkbox = node;
                         const indeterminate = (typeof (this.props.indeterminate) !== 'undefined') ? this.props.indeterminate : defaultIndeterminate;
-                        node && (this.fields.checkbox.indeterminate = indeterminate);
+                        node && (this.checkbox.indeterminate = indeterminate);
                     }}
                     onChange={chainedFunction(
                         this.actions.onChange,
                         onChange
                     )}
                 />
-                <i className={styles['control-indicator']} />
-                <span className={styles.controlText}>{ children }</span>
+                <i className={styles.controlIndicator} />
+                {label ? <span className={cx(styles.textLabel, labelClassName)} style={labelStyle}>{label}</span> : null}
+                {children}
             </label>
         );
     }

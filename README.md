@@ -25,107 +25,82 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 
 ## Usage
 
-```js
-// Basic
-<Checkbox />
-
-// Checked
-<Checkbox defaultChecked />
-
-// Force checked
-<Checkbox checked />
-
-// Partial checked
-<Checkbox defaultIndeterminate />
-
-// Partial checked. Force indeterminate status (Do not change by click)
-<Checkbox indeterminate />
-
-// Disabled
-<Checkbox disabled />
-
-// With Label
-<Checkbox>
-    Normal
-</Checkbox>
-
-// Get checked status of checkbox by this.checkbox.checked
-// Get indeterminate status of checkbox by this.checkbox.indeterminate
-<Checkbox
-    ref={node => {
-        this.checkbox = node;
-    }}
-/>
+```jsx
+<Checkbox label="Checkbox label" />
 ```
 
+The label prop is optional, you can use children to pass through the component.
+
+```jsx
+<Checkbox label="Checkbox label">
+    <p style={{ marginLeft: 24 }}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</Checkbox>
+
+<Checkbox>
+    <span style={{ verticalAlign: 'middle', marginLeft: 8 }}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </span>
+</Checkbox>
+```
+
+### Uncontrolled Checkbox
+
+```js
+// Default checked
+<Checkbox defaultChecked />
+
+// Default partially checked
+<Checkbox defaultChecked defaultIndeterminate />
+```
+
+### Controlled Checkbox
+
+```js
+// Checked
+<Checkbox checked />
+
+// Partially checked
+<Checkbox checked indeterminate />
+```
 
 ## API
 
 ### Properties
-<table>
-    <thead>
-        <tr>
-            <th align="left">Name</th>
-            <th align="left">Type</th>
-            <th align="left">Default</th>
-            <th align="left">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>defaultChecked</td>
-            <td>Boolean</td>
-            <td></td>
-            <td>Specify default checked status for checkbox</td>
-        </tr>
-        <tr>
-            <td>checked</td>
-            <td>Boolean</td>
-            <td></td>
-            <td>Force checked status for checkbox</td>
-        </tr>
-        <tr>
-            <td>defaultIndeterminate</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Specify default indeterminate status for checkbox</td>
-        </tr>
-        <tr>
-            <td>indeterminate</td>
-            <td>Boolean</td>
-            <td></td>
-            <td>Force indeterminate status for checkbox</td>
-        </tr>
-        <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Specify disabled status for checkbox</td>
-        </tr>
-  </tbody>
-</table>
 
-<table>
-    <thead>
-        <tr>
-            <th align="left">Name</th>
-            <th align="left">Type</th>
-            <th align="left">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>checked</td>
-            <td>Boolean</td>
-            <td>Get checked status</td>
-        </tr>
-        <tr>
-            <td>indeterminate</td>
-            <td>Boolean</td>
-            <td>Get indeterminate status</td>
-        </tr>
-  </tbody>
-</table>
+Name | Type | Default | Description
+:--- | :--- | :------ | :----------
+children | any | | Children to pass through the component.
+label | Node or String | | Text label to attach next to the checkbox element.
+labelClassName | | Customized class name for the text label.
+labelStyle | | Customized style for the text label.
+disabled | Boolean | false | If true, the checkbox shown as disabled and cannot be modified.
+checked | Boolean | | The checked state of the checkbox element.
+defaultChecked | Boolean | | The default checked state of the checkbox element.
+indeterminate | Boolean | | The indeterminate state of the checkbox element.
+defaultIndeterminate | Boolean | false | The default indeterminate state of the checkbox element.
+
+### Class Properties
+
+Use the ref property to get a reference to the component:
+
+```jsx
+<Checkbox
+    ref={node => {
+        if (node) {
+            this.checkbox = node;
+            console.log(this.checkbox.checked);
+            console.log(this.checkbox.indeterminate);
+        }
+    }}
+/>
+```
+
+Name | Type | Description
+:--- | :--- | :----------
+checked | Boolean | Get the checked state.
+indeterminate | Boolean | Get the indeterminate state.
 
 ## License
 
