@@ -12,6 +12,8 @@ class Checkbox extends PureComponent {
         ]),
         labelClassName: PropTypes.object,
         labelStyle: PropTypes.object,
+        inputClassName: PropTypes.object,
+        inputStyle: PropTypes.object,
         disabled: PropTypes.bool,
         checked: PropTypes.bool,
         defaultChecked: PropTypes.bool,
@@ -27,10 +29,16 @@ class Checkbox extends PureComponent {
     checkbox = null;
 
     get checked() {
+        if (!this.checkbox) {
+            return null;
+        }
         return this.checkbox.checked;
     }
 
     get indeterminate() {
+        if (!this.checkbox) {
+            return null;
+        }
         return this.checkbox.indeterminate;
     }
 
@@ -47,11 +55,14 @@ class Checkbox extends PureComponent {
             label,
             labelClassName,
             labelStyle,
+            inputClassName,
+            inputStyle,
             disabled,
             defaultIndeterminate,
 
             // Default props
             className,
+            style,
             children,
             ...props
         } = this.props;
@@ -67,17 +78,22 @@ class Checkbox extends PureComponent {
                     styles.controlCheckbox,
                     { [styles.disabled]: disabled }
                 )}
+                style={style}
             >
                 <input
                     {...props}
-                    type="checkbox"
-                    disabled={disabled}
-                    className={styles.inputCheckbox}
                     ref={node => {
                         this.checkbox = node;
                         const indeterminate = (typeof (this.props.indeterminate) !== 'undefined') ? this.props.indeterminate : defaultIndeterminate;
                         node && (this.checkbox.indeterminate = indeterminate);
                     }}
+                    type="checkbox"
+                    disabled={disabled}
+                    className={cx(
+                        inputClassName,
+                        styles.inputCheckbox
+                    )}
+                    style={inputStyle}
                     onChange={chainedFunction(
                         this.actions.onChange,
                         onChange
