@@ -60,8 +60,6 @@ class Checkbox extends PureComponent {
         delete props.onChange;
         delete props.indeterminate;
 
-        console.log('### label:', label);
-
         return (
             <label
                 className={cx(
