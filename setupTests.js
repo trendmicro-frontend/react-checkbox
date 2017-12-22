@@ -5,6 +5,14 @@ import { JSDOM } from 'jsdom';
 // React 16 Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() });
 
+// Ignore `css` and `styl` files
+require.extensions['.css'] = () => {
+    return;
+};
+require.extensions['.styl'] = () => {
+    return;
+};
+
 // JSDOM
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
