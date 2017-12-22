@@ -23841,6 +23841,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var noop = function noop() {};
+
 var Checkbox = (_temp2 = _class = function (_PureComponent) {
     _inherits(Checkbox, _PureComponent);
 
@@ -23855,11 +23857,9 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).call.apply(_ref, [this].concat(args))), _this), _this.checkbox = null, _this.actions = {
-            onChange: function onChange() {
-                if (typeof _this.props.indeterminate !== 'undefined') {
-                    _this.checkbox.indeterminate = _this.props.indeterminate;
-                }
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).call.apply(_ref, [this].concat(args))), _this), _this.checkbox = null, _this.onChange = function (event) {
+            if (typeof _this.props.indeterminate !== 'undefined') {
+                _this.checkbox.indeterminate = !!_this.props.indeterminate;
             }
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
@@ -23875,13 +23875,13 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
                 inputStyle = _props.inputStyle,
                 disabled = _props.disabled,
                 defaultIndeterminate = _props.defaultIndeterminate,
+                _props$onChange = _props.onChange,
+                onChange = _props$onChange === undefined ? noop : _props$onChange,
                 className = _props.className,
                 style = _props.style,
                 children = _props.children,
-                props = _objectWithoutProperties(_props, ['label', 'inputClassName', 'inputStyle', 'disabled', 'defaultIndeterminate', 'className', 'style', 'children']);
+                props = _objectWithoutProperties(_props, ['label', 'inputClassName', 'inputStyle', 'disabled', 'defaultIndeterminate', 'onChange', 'className', 'style', 'children']);
 
-            var onChange = props.onChange || function () {};
-            delete props.onChange;
             delete props.indeterminate;
 
             return _react2.default.createElement(
@@ -23900,7 +23900,7 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
                     disabled: disabled,
                     className: (0, _classnames2.default)(inputClassName, _index2.default.inputCheckbox),
                     style: inputStyle,
-                    onChange: (0, _chainedFunction2.default)(this.actions.onChange, onChange)
+                    onChange: (0, _chainedFunction2.default)(this.onChange, onChange)
                 })),
                 _react2.default.createElement('i', { className: _index2.default.controlIndicator }),
                 label ? _react2.default.createElement(
@@ -25000,4 +25000,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?50736b9652b5ed617b2a
+//# sourceMappingURL=bundle.js.map?32daae409c235a945f21

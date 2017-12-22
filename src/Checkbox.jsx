@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import chainedFunction from 'chained-function';
 import styles from './index.styl';
 
+const noop = () => {};
+
 class Checkbox extends PureComponent {
     static propTypes = {
         label: PropTypes.oneOfType([
@@ -26,6 +28,12 @@ class Checkbox extends PureComponent {
 
     checkbox = null;
 
+    onChange = (event) => {
+        if (typeof (this.props.indeterminate) !== 'undefined') {
+            this.checkbox.indeterminate = !!this.props.indeterminate;
+        }
+    };
+
     get checked() {
         if (!this.checkbox) {
             return null;
@@ -40,14 +48,6 @@ class Checkbox extends PureComponent {
         return this.checkbox.indeterminate;
     }
 
-    actions = {
-        onChange: () => {
-            if (typeof (this.props.indeterminate) !== 'undefined') {
-                this.checkbox.indeterminate = this.props.indeterminate;
-            }
-        }
-    }
-
     render() {
         const {
             label,
@@ -55,6 +55,7 @@ class Checkbox extends PureComponent {
             inputStyle,
             disabled,
             defaultIndeterminate,
+            onChange = noop,
 
             // Default props
             className,
@@ -63,8 +64,6 @@ class Checkbox extends PureComponent {
             ...props
         } = this.props;
 
-        const onChange = props.onChange || function() {};
-        delete props.onChange;
         delete props.indeterminate;
 
         return (
@@ -91,7 +90,7 @@ class Checkbox extends PureComponent {
                     )}
                     style={inputStyle}
                     onChange={chainedFunction(
-                        this.actions.onChange,
+                        this.onChange,
                         onChange
                     )}
                 />
