@@ -1,7 +1,7 @@
 {
   "name": "@trendmicro/react-checkbox",
   "version": "3.0.0",
-  "description": "Trend Micro Components: React Checkbox",
+  "description": "React Checkbox component",
   "main": "lib/index.js",
   "files": [
     "dist",
