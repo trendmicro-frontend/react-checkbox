@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow, mount, configure } from 'enzyme';
 import sinon from 'sinon';
 import { test } from 'tap';
-import Checkbox from '../lib';
+import Checkbox from '../src';
 
 test('<Checkbox />', (t) => {
     const wrapper = mount(<Checkbox />);
