@@ -10,8 +10,6 @@ class Checkbox extends PureComponent {
             PropTypes.string,
             PropTypes.node
         ]),
-        labelClassName: PropTypes.object,
-        labelStyle: PropTypes.object,
         inputClassName: PropTypes.object,
         inputStyle: PropTypes.object,
         disabled: PropTypes.bool,
@@ -53,8 +51,6 @@ class Checkbox extends PureComponent {
     render() {
         const {
             label,
-            labelClassName,
-            labelStyle,
             inputClassName,
             inputStyle,
             disabled,
@@ -100,7 +96,7 @@ class Checkbox extends PureComponent {
                     )}
                 />
                 <i className={styles.controlIndicator} />
-                {label ? <span className={cx(styles.textLabel, labelClassName)} style={labelStyle}>{label}</span> : null}
+                {label ? <span className={styles.textLabel}>{label}</span> : null}
                 {children}
             </label>
         );
