@@ -23871,40 +23871,41 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
 
             var _props = this.props,
                 label = _props.label,
-                labelClassName = _props.labelClassName,
-                labelStyle = _props.labelStyle,
+                inputClassName = _props.inputClassName,
+                inputStyle = _props.inputStyle,
                 disabled = _props.disabled,
                 defaultIndeterminate = _props.defaultIndeterminate,
                 className = _props.className,
+                style = _props.style,
                 children = _props.children,
-                props = _objectWithoutProperties(_props, ['label', 'labelClassName', 'labelStyle', 'disabled', 'defaultIndeterminate', 'className', 'children']);
+                props = _objectWithoutProperties(_props, ['label', 'inputClassName', 'inputStyle', 'disabled', 'defaultIndeterminate', 'className', 'style', 'children']);
 
             var onChange = props.onChange || function () {};
             delete props.onChange;
             delete props.indeterminate;
 
-            console.log('### label:', label);
-
             return _react2.default.createElement(
                 'label',
                 {
-                    className: (0, _classnames2.default)(className, _index2.default.controlCheckbox, _defineProperty({}, _index2.default.disabled, disabled))
+                    className: (0, _classnames2.default)(className, _index2.default.controlCheckbox, _defineProperty({}, _index2.default.disabled, disabled)),
+                    style: style
                 },
                 _react2.default.createElement('input', _extends({}, props, {
-                    type: 'checkbox',
-                    disabled: disabled,
-                    className: _index2.default.inputCheckbox,
                     ref: function ref(node) {
                         _this2.checkbox = node;
                         var indeterminate = typeof _this2.props.indeterminate !== 'undefined' ? _this2.props.indeterminate : defaultIndeterminate;
                         node && (_this2.checkbox.indeterminate = indeterminate);
                     },
+                    type: 'checkbox',
+                    disabled: disabled,
+                    className: (0, _classnames2.default)(inputClassName, _index2.default.inputCheckbox),
+                    style: inputStyle,
                     onChange: (0, _chainedFunction2.default)(this.actions.onChange, onChange)
                 })),
                 _react2.default.createElement('i', { className: _index2.default.controlIndicator }),
                 label ? _react2.default.createElement(
                     'span',
-                    { className: (0, _classnames2.default)(_index2.default.textLabel, labelClassName), style: labelStyle },
+                    { className: _index2.default.textLabel },
                     label
                 ) : null,
                 children
@@ -23913,11 +23914,17 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
     }, {
         key: 'checked',
         get: function get() {
+            if (!this.checkbox) {
+                return null;
+            }
             return this.checkbox.checked;
         }
     }, {
         key: 'indeterminate',
         get: function get() {
+            if (!this.checkbox) {
+                return null;
+            }
             return this.checkbox.indeterminate;
         }
     }]);
@@ -23925,8 +23932,8 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
     return Checkbox;
 }(_react.PureComponent), _class.propTypes = {
     label: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.node]),
-    labelClassName: _propTypes2.default.object,
-    labelStyle: _propTypes2.default.object,
+    inputClassName: _propTypes2.default.object,
+    inputStyle: _propTypes2.default.object,
     disabled: _propTypes2.default.bool,
     checked: _propTypes2.default.bool,
     defaultChecked: _propTypes2.default.bool,
@@ -24993,4 +25000,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?27eb881dc759b2c07f0e
+//# sourceMappingURL=bundle.js.map?50736b9652b5ed617b2a
