@@ -2,8 +2,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
 import { test } from 'tap';
-import Checkbox from '../src';
 import '../setupTests';
+import Checkbox from '../src';
 
 test('<Checkbox />', (t) => {
     const wrapper = mount(<Checkbox />);
