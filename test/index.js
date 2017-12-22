@@ -1,9 +1,9 @@
-import '../setupTests';
 import React from 'react';
-import { shallow, mount, configure } from 'enzyme';
+import { mount } from 'enzyme';
 import sinon from 'sinon';
 import { test } from 'tap';
 import Checkbox from '../src';
+import '../setupTests';
 
 test('<Checkbox />', (t) => {
     const wrapper = mount(<Checkbox />);
@@ -89,17 +89,17 @@ test('renders text label', (t) => {
     const wrapper = mount(<Checkbox />);
     t.equal(wrapper.props().label, undefined, 'text label should be empty');
     wrapper.setProps({ label: 'My label' }); // Set new label
-    t.equal(wrapper.props().label, 'My label', `text label should be equal to 'My label'`);
-    t.equal(wrapper.text(), 'My label', `text label should be equal to 'My label'`);
+    t.equal(wrapper.props().label, 'My label', 'text label should be equal to "My label"');
+    t.equal(wrapper.text(), 'My label', 'text label should be equal to "My label"');
     t.end();
 });
 
 test('renders children when passed in', (t) => {
-    const wrapper = mount(
+    const wrapper = mount((
         <Checkbox>
             <p>Lorem ipsum</p>
         </Checkbox>
-    );
+    ));
     t.ok(wrapper.contains(<p>Lorem ipsum</p>));
     t.end();
 });
