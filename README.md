@@ -145,7 +145,7 @@ indeterminate | Boolean | Get the indeterminate state.
 Use the ref property to get a reference to this component:
 
 ```jsx
-<RadioGroup
+<CheckboxGroup
     ref={node => {
         if (node) {
             this.checkboxGroup = node;
