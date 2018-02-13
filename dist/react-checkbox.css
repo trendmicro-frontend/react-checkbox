@@ -1,4 +1,4 @@
-/*! react-checkbox v3.0.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-checkbox */
+/*! react-checkbox v3.1.0 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-checkbox */
 .checkbox---control-checkbox---2Mo4k {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -22,6 +22,7 @@
 .checkbox---control-checkbox---2Mo4k .checkbox---control-indicator---dcwXW {
   display: inline-block;
   vertical-align: middle;
+  pointer-events: none;
 }
 .checkbox---control-checkbox---2Mo4k .checkbox---text-label---2D19D:not(:empty) {
   display: inline-block;

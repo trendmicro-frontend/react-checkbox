@@ -1,3 +1,4 @@
-import Checkbox from './Checkbox';
+export Checkbox from './Checkbox';
+export CheckboxGroup from './CheckboxGroup';
 
-module.exports = Checkbox;
+export { default } from './Checkbox'; // Backward compatibility

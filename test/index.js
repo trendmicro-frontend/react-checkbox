@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import sinon from 'sinon';
 import { test } from 'tap';
 import '../setupTests';
-import Checkbox from '../src';
+import { Checkbox } from '../src';
 
 test('<Checkbox />', (t) => {
     const wrapper = mount(<Checkbox />);

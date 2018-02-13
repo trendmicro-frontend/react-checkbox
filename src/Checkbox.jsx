@@ -18,7 +18,8 @@ class Checkbox extends PureComponent {
         checked: PropTypes.bool,
         defaultChecked: PropTypes.bool,
         indeterminate: PropTypes.bool,
-        defaultIndeterminate: PropTypes.bool
+        defaultIndeterminate: PropTypes.bool,
+        onChange: PropTypes.func
     };
 
     static defaultProps = {

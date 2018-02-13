@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from './Section';
-import Checkbox from '../src';
+import { Checkbox } from '../src';
 
 const LabelText = styled.span`
     display: inline-block;

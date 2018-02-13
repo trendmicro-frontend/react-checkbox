@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-checkbox",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "React Checkbox component",
   "main": "lib/index.js",
   "files": [
@@ -46,6 +46,7 @@
   "dependencies": {
     "chained-function": "^0.5.0",
     "classnames": "^2.2.5",
+    "ensure-array": "^1.0.0",
     "prop-types": "^15.6.0"
   },
   "devDependencies": {

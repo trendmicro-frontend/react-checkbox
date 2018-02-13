@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom';
 import Navbar from './Navbar';
 import Uncontrolled from './Uncontrolled';
 import Controlled from './Controlled';
+import UncontrolledCheckboxGroup from './UncontrolledCheckboxGroup';
+import ControlledCheckboxGroup from './ControlledCheckboxGroup';
 
 class App extends React.Component {
     render() {
@@ -21,6 +23,12 @@ class App extends React.Component {
                     </div>
                     <div className="col-lg-6 col-md-12">
                         <Controlled />
+                    </div>
+                    <div className="col-lg-6 col-md-12">
+                        <UncontrolledCheckboxGroup />
+                    </div>
+                    <div className="col-lg-6 col-md-12">
+                        <ControlledCheckboxGroup />
                     </div>
                 </div>
             </div>

@@ -652,7 +652,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".control-checkbox---OXP52 {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  line-height: 20px;\n  min-height: 20px;\n  padding: 0;\n  margin-bottom: 0;\n  cursor: pointer;\n}\n.control-checkbox---OXP52 *,\n.control-checkbox---OXP52 *:before,\n.control-checkbox---OXP52 *:after {\n  -webkit-box-sizing: inherit;\n  -moz-box-sizing: inherit;\n  box-sizing: inherit;\n}\n.control-checkbox---OXP52 .input-checkbox----ctQ9 {\n  display: none;\n}\n.control-checkbox---OXP52 .control-indicator---1RE7K {\n  display: inline-block;\n  vertical-align: middle;\n}\n.control-checkbox---OXP52 .text-label---fl6Hr:not(:empty) {\n  display: inline-block;\n  vertical-align: middle;\n  margin-left: 8px;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K {\n  content: \"\";\n  display: inline-block;\n  background: url(" + __webpack_require__("../images/icon/component_checkbox.png") + ") no-repeat -1px 0;\n  width: 16px;\n  height: 16px;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -41px 0;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -101px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K {\n  background-position: -21px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -61px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -121px 0;\n}\n.input-checkbox----ctQ9:not(:checked):not(:indeterminate):disabled + .control-indicator---1RE7K {\n  background-position: -81px 0;\n}\n.control-checkbox---OXP52.disabled---3l4Hc > .control-text---1nZAA {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:disabled + .control-indicator---1RE7K {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:checked:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n.input-checkbox----ctQ9:not(:checked):indeterminate:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n", ""]);
+exports.push([module.i, ".control-checkbox---OXP52 {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  line-height: 20px;\n  min-height: 20px;\n  padding: 0;\n  margin-bottom: 0;\n  cursor: pointer;\n}\n.control-checkbox---OXP52 *,\n.control-checkbox---OXP52 *:before,\n.control-checkbox---OXP52 *:after {\n  -webkit-box-sizing: inherit;\n  -moz-box-sizing: inherit;\n  box-sizing: inherit;\n}\n.control-checkbox---OXP52 .input-checkbox----ctQ9 {\n  display: none;\n}\n.control-checkbox---OXP52 .control-indicator---1RE7K {\n  display: inline-block;\n  vertical-align: middle;\n  pointer-events: none;\n}\n.control-checkbox---OXP52 .text-label---fl6Hr:not(:empty) {\n  display: inline-block;\n  vertical-align: middle;\n  margin-left: 8px;\n}\n.input-checkbox----ctQ9 + .control-indicator---1RE7K {\n  content: \"\";\n  display: inline-block;\n  background: url(" + __webpack_require__("../images/icon/component_checkbox.png") + ") no-repeat -1px 0;\n  width: 16px;\n  height: 16px;\n}\n.input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -41px 0;\n}\n.input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -101px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .control-indicator---1RE7K {\n  background-position: -21px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:checked + .control-indicator---1RE7K {\n  background-position: -61px 0;\n}\n.control-checkbox---OXP52:not(.disabled---3l4Hc):hover > .input-checkbox----ctQ9:indeterminate + .control-indicator---1RE7K {\n  background-position: -121px 0;\n}\n.input-checkbox----ctQ9:not(:checked):not(:indeterminate):disabled + .control-indicator---1RE7K {\n  background-position: -81px 0;\n}\n.control-checkbox---OXP52.disabled---3l4Hc > .control-text---1nZAA {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:disabled + .control-indicator---1RE7K {\n  cursor: not-allowed;\n}\n.input-checkbox----ctQ9:checked:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n.input-checkbox----ctQ9:not(:checked):indeterminate:disabled + .control-indicator---1RE7K {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -858,6 +858,21 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "../node_modules/ensure-array/ensure-array.js":
+/***/ (function(module, exports) {
+
+module.exports = function ensureArray(a, b, n) {
+  if (arguments.length === 0) return [];            // no args, ret []
+  if (arguments.length === 1) {                     // single argument
+    if (a === undefined || a === null) return [];   // undefined or null, ret []
+    if (Array.isArray(a)) return a;                 // isArray, return it
+  }
+  return Array.prototype.slice.call(arguments);     // return array with copy of all arguments
 }
 
 
@@ -23938,12 +23953,166 @@ var Checkbox = (_temp2 = _class = function (_PureComponent) {
     checked: _propTypes2.default.bool,
     defaultChecked: _propTypes2.default.bool,
     indeterminate: _propTypes2.default.bool,
-    defaultIndeterminate: _propTypes2.default.bool
+    defaultIndeterminate: _propTypes2.default.bool,
+    onChange: _propTypes2.default.func
 }, _class.defaultProps = {
     disabled: false,
     defaultIndeterminate: false
 }, _temp2);
 exports.default = Checkbox;
+
+/***/ }),
+
+/***/ "../src/CheckboxGroup.jsx":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _class, _temp2;
+
+var _chainedFunction = __webpack_require__("../node_modules/chained-function/lib/index.js");
+
+var _chainedFunction2 = _interopRequireDefault(_chainedFunction);
+
+var _ensureArray = __webpack_require__("../node_modules/ensure-array/ensure-array.js");
+
+var _ensureArray2 = _interopRequireDefault(_ensureArray);
+
+var _propTypes = __webpack_require__("../node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = __webpack_require__("../node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Checkbox = __webpack_require__("../src/Checkbox.jsx");
+
+var _Checkbox2 = _interopRequireDefault(_Checkbox);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CheckboxGroup = (_temp2 = _class = function (_PureComponent) {
+    _inherits(CheckboxGroup, _PureComponent);
+
+    function CheckboxGroup() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, CheckboxGroup);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CheckboxGroup.__proto__ || Object.getPrototypeOf(CheckboxGroup)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            value: (0, _ensureArray2.default)(_this.props.value || _this.props.defaultValue)
+        }, _this.handleChange = function (value, event) {
+            var newValue = void 0;
+            if (event.target.checked) {
+                newValue = _this.state.value.concat(value);
+            } else {
+                newValue = _this.state.value.filter(function (v) {
+                    return v !== value;
+                });
+            }
+
+            if (_this.props.value !== undefined) {
+                // Controlled component
+                _this.setState({ value: (0, _ensureArray2.default)(_this.props.value) });
+            } else {
+                // Uncontrolled component
+                _this.setState({ value: newValue });
+            }
+
+            if (typeof _this.props.onChange === 'function') {
+                _this.props.onChange(newValue, event);
+            }
+        }, _this.renderChildren = function (children) {
+            var mapChild = function mapChild(child) {
+                if (!_react2.default.isValidElement(child) || !child.props) {
+                    return child;
+                }
+
+                if (child.type === CheckboxGroup) {
+                    // No nested checkbox groups
+                    return child;
+                }
+
+                if (child.type === _Checkbox2.default) {
+                    return (0, _react.cloneElement)(child, {
+                        checked: _this.state.value.indexOf(child.props.value) >= 0,
+                        disabled: _this.props.disabled || child.props.disabled,
+                        onChange: (0, _chainedFunction2.default)(child.props.onChange, function (event) {
+                            _this.handleChange(child.props.value, event);
+                        })
+                    });
+                }
+
+                if (child.props.children && _typeof(child.props.children) === 'object') {
+                    return (0, _react.cloneElement)(child, {
+                        children: _this.renderChildren(child.props.children)
+                    });
+                }
+
+                return child;
+            };
+
+            if (Array.isArray(children)) {
+                return _react2.default.Children.map(children, mapChild);
+            } else {
+                return mapChild(children);
+            }
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(CheckboxGroup, [{
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (nextProps.value !== undefined) {
+                this.setState({
+                    value: (0, _ensureArray2.default)(nextProps.value)
+                });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return this.renderChildren(this.props.children);
+        }
+    }, {
+        key: 'value',
+        get: function get() {
+            return this.state.value;
+        }
+    }]);
+
+    return CheckboxGroup;
+}(_react.PureComponent), _class.propTypes = {
+    disabled: _propTypes2.default.bool,
+    onChange: _propTypes2.default.func,
+    value: _propTypes2.default.arrayOf(_propTypes2.default.any),
+    defaultValue: _propTypes2.default.arrayOf(_propTypes2.default.any)
+}, _class.defaultProps = {
+    disabled: false
+}, _temp2);
+exports.default = CheckboxGroup;
 
 /***/ }),
 
@@ -23953,13 +24122,30 @@ exports.default = Checkbox;
 "use strict";
 
 
-var _Checkbox = __webpack_require__("../src/Checkbox.jsx");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.CheckboxGroup = exports.Checkbox = undefined;
 
-var _Checkbox2 = _interopRequireDefault(_Checkbox);
+var _Checkbox2 = __webpack_require__("../src/Checkbox.jsx");
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Checkbox2).default;
+  }
+});
+
+var _Checkbox3 = _interopRequireDefault(_Checkbox2);
+
+var _CheckboxGroup2 = __webpack_require__("../src/CheckboxGroup.jsx");
+
+var _CheckboxGroup3 = _interopRequireDefault(_CheckboxGroup2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = _Checkbox2.default;
+exports.Checkbox = _Checkbox3.default;
+exports.CheckboxGroup = _CheckboxGroup3.default;
 
 /***/ }),
 
@@ -24020,8 +24206,6 @@ var _Section = __webpack_require__("./Section.jsx");
 var _Section2 = _interopRequireDefault(_Section);
 
 var _src = __webpack_require__("../src/index.js");
-
-var _src2 = _interopRequireDefault(_src);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24233,7 +24417,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: false,
                     label: 'Unchecked'
                 })
@@ -24241,7 +24425,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: true,
                     label: 'Checked'
                 })
@@ -24249,7 +24433,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: true,
                     indeterminate: true,
                     label: 'Partially checked'
@@ -24258,7 +24442,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: false,
                     disabled: true,
                     label: 'Unchecked (disabled)'
@@ -24267,7 +24451,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: true,
                     disabled: true,
                     label: 'Checked (disabled)'
@@ -24276,7 +24460,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: true,
                     indeterminate: true,
                     disabled: true,
@@ -24287,7 +24471,7 @@ exports.default = function () {
                 'div',
                 { className: 'checkbox' },
                 _react2.default.createElement(
-                    _src2.default,
+                    _src.Checkbox,
                     {
                         checked: false,
                         label: 'Unchecked'
@@ -24307,7 +24491,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox-inline' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: false,
                     label: 'Unchecked'
                 })
@@ -24315,7 +24499,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox-inline' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: true,
                     label: 'Checked'
                 })
@@ -24323,7 +24507,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox-inline' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     checked: true,
                     indeterminate: true,
                     label: 'Partially checked'
@@ -24332,6 +24516,149 @@ exports.default = function () {
         )
     );
 };
+
+/***/ }),
+
+/***/ "./ControlledCheckboxGroup.jsx":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__("../node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Section = __webpack_require__("./Section.jsx");
+
+var _Section2 = _interopRequireDefault(_Section);
+
+var _src = __webpack_require__("../src/index.js");
+
+var _Space = __webpack_require__("./Space.jsx");
+
+var _Space2 = _interopRequireDefault(_Space);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _default = function (_PureComponent) {
+    _inherits(_default, _PureComponent);
+
+    function _default() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, _default);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _default.__proto__ || Object.getPrototypeOf(_default)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            items: [],
+            comic: []
+        }, _this.handleChangeByKey = function (key) {
+            return function (value, event) {
+                _this.setState(function (state) {
+                    return _defineProperty({}, key, value);
+                });
+            };
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(_default, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _Section2.default,
+                { className: 'row-sm-11 row-md-6' },
+                _react2.default.createElement(
+                    'h3',
+                    null,
+                    'Controlled Checkbox Group'
+                ),
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Stacked'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Selected: ' + this.state.items
+                ),
+                _react2.default.createElement(
+                    _src.CheckboxGroup,
+                    {
+                        name: 'items',
+                        value: this.state.items,
+                        onChange: this.handleChangeByKey('items')
+                    },
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_src.Checkbox, { label: 'Item #1', value: 'item.1' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_src.Checkbox, { label: 'Item #2', value: 'item.2' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_src.Checkbox, { label: 'Item #3', value: 'item.3' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Inline'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Selected: ' + this.state.comic
+                ),
+                _react2.default.createElement(
+                    _src.CheckboxGroup,
+                    {
+                        name: 'comic',
+                        value: this.state.comic,
+                        onChange: this.handleChangeByKey('comic')
+                    },
+                    _react2.default.createElement(_src.Checkbox, { label: 'Batman (DC)', value: 'dc:batman' }),
+                    _react2.default.createElement(_Space2.default, { width: '16' }),
+                    _react2.default.createElement(_src.Checkbox, { label: 'Hulk (Marvel)', value: 'marvel:hulk' }),
+                    _react2.default.createElement(_Space2.default, { width: '16' }),
+                    _react2.default.createElement(_src.Checkbox, { label: 'Superman (DC)', value: 'dc:superman' }),
+                    _react2.default.createElement(_Space2.default, { width: '16' }),
+                    _react2.default.createElement(_src.Checkbox, { label: 'Spider-Man (Marvel)', value: 'marvel:spiderman', disabled: true })
+                )
+            );
+        }
+    }]);
+
+    return _default;
+}(_react.PureComponent);
+
+exports.default = _default;
 
 /***/ }),
 
@@ -24578,6 +24905,60 @@ if(false) {
 
 /***/ }),
 
+/***/ "./Space.jsx":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__("../node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__("../node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var Space = function Space(_ref) {
+    var Component = _ref.tag,
+        width = _ref.width,
+        props = _objectWithoutProperties(_ref, ['tag', 'width']);
+
+    if (typeof width === 'string' && width.match(/^\d+$/)) {
+        width += 'px';
+    }
+
+    props.style = _extends({
+        display: 'inline-block',
+        width: width
+    }, props.style);
+    return _react2.default.createElement(Component, props);
+};
+
+Space.propTypes = {
+    tag: _propTypes2.default.oneOfType([_propTypes2.default.node, _propTypes2.default.string]),
+    width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string])
+};
+
+Space.defaultProps = {
+    tag: 'span',
+    width: 0
+};
+
+exports.default = Space;
+
+/***/ }),
+
 /***/ "./Uncontrolled.jsx":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24603,8 +24984,6 @@ var _Section = __webpack_require__("./Section.jsx");
 var _Section2 = _interopRequireDefault(_Section);
 
 var _src = __webpack_require__("../src/index.js");
-
-var _src2 = _interopRequireDefault(_src);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24816,14 +25195,14 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     label: 'Unchecked'
                 })
             ),
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     defaultChecked: true,
                     label: 'Checked'
                 })
@@ -24831,7 +25210,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     defaultChecked: true,
                     defaultIndeterminate: true,
                     label: 'Partially checked'
@@ -24840,7 +25219,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     disabled: true,
                     label: 'Unchecked (disabled)'
                 })
@@ -24848,7 +25227,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     defaultChecked: true,
                     disabled: true,
                     label: 'Checked (disabled)'
@@ -24857,7 +25236,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     defaultChecked: true,
                     defaultIndeterminate: true,
                     disabled: true,
@@ -24868,7 +25247,7 @@ exports.default = function () {
                 'div',
                 { className: 'checkbox' },
                 _react2.default.createElement(
-                    _src2.default,
+                    _src.Checkbox,
                     {
                         label: 'Unchecked'
                     },
@@ -24887,14 +25266,14 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox-inline' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     label: 'Unchecked'
                 })
             ),
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox-inline' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     defaultChecked: true,
                     label: 'Checked'
                 })
@@ -24902,7 +25281,7 @@ exports.default = function () {
             _react2.default.createElement(
                 'div',
                 { className: 'checkbox-inline' },
-                _react2.default.createElement(_src2.default, {
+                _react2.default.createElement(_src.Checkbox, {
                     defaultChecked: true,
                     defaultIndeterminate: true,
                     label: 'Partially checked'
@@ -24911,6 +25290,147 @@ exports.default = function () {
         )
     );
 };
+
+/***/ }),
+
+/***/ "./UncontrolledCheckboxGroup.jsx":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__("../node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Section = __webpack_require__("./Section.jsx");
+
+var _Section2 = _interopRequireDefault(_Section);
+
+var _src = __webpack_require__("../src/index.js");
+
+var _Space = __webpack_require__("./Space.jsx");
+
+var _Space2 = _interopRequireDefault(_Space);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _default = function (_PureComponent) {
+    _inherits(_default, _PureComponent);
+
+    function _default() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, _default);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _default.__proto__ || Object.getPrototypeOf(_default)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            items: [],
+            comic: []
+        }, _this.handleChangeByKey = function (key) {
+            return function (value, event) {
+                _this.setState(function (state) {
+                    return _defineProperty({}, key, value);
+                });
+            };
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(_default, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _Section2.default,
+                { className: 'row-sm-11 row-md-6' },
+                _react2.default.createElement(
+                    'h3',
+                    null,
+                    'Uncontrolled Checkbox Group'
+                ),
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Stacked'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Selected: ' + this.state.items
+                ),
+                _react2.default.createElement(
+                    _src.CheckboxGroup,
+                    {
+                        name: 'items',
+                        onChange: this.handleChangeByKey('items')
+                    },
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_src.Checkbox, { label: 'Item #1', value: 'item.1' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_src.Checkbox, { label: 'Item #2', value: 'item.2' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_src.Checkbox, { label: 'Item #3', value: 'item.3' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Inline'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Selected: ' + this.state.comic
+                ),
+                _react2.default.createElement(
+                    _src.CheckboxGroup,
+                    {
+                        name: 'comic',
+                        onChange: this.handleChangeByKey('comic')
+                    },
+                    _react2.default.createElement(_src.Checkbox, { label: 'Batman (DC)', value: 'dc:batman' }),
+                    _react2.default.createElement(_Space2.default, { width: '16' }),
+                    _react2.default.createElement(_src.Checkbox, { label: 'Hulk (Marvel)', value: 'marvel:hulk' }),
+                    _react2.default.createElement(_Space2.default, { width: '16' }),
+                    _react2.default.createElement(_src.Checkbox, { label: 'Superman (DC)', value: 'dc:superman' }),
+                    _react2.default.createElement(_Space2.default, { width: '16' }),
+                    _react2.default.createElement(_src.Checkbox, { label: 'Spider-Man (Marvel)', value: 'marvel:spiderman', disabled: true })
+                )
+            );
+        }
+    }]);
+
+    return _default;
+}(_react.PureComponent);
+
+exports.default = _default;
 
 /***/ }),
 
@@ -24945,6 +25465,14 @@ var _Uncontrolled2 = _interopRequireDefault(_Uncontrolled);
 var _Controlled = __webpack_require__("./Controlled.jsx");
 
 var _Controlled2 = _interopRequireDefault(_Controlled);
+
+var _UncontrolledCheckboxGroup = __webpack_require__("./UncontrolledCheckboxGroup.jsx");
+
+var _UncontrolledCheckboxGroup2 = _interopRequireDefault(_UncontrolledCheckboxGroup);
+
+var _ControlledCheckboxGroup = __webpack_require__("./ControlledCheckboxGroup.jsx");
+
+var _ControlledCheckboxGroup2 = _interopRequireDefault(_ControlledCheckboxGroup);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24986,6 +25514,16 @@ var App = function (_React$Component) {
                         'div',
                         { className: 'col-lg-6 col-md-12' },
                         _react2.default.createElement(_Controlled2.default, null)
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-lg-6 col-md-12' },
+                        _react2.default.createElement(_UncontrolledCheckboxGroup2.default, null)
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-lg-6 col-md-12' },
+                        _react2.default.createElement(_ControlledCheckboxGroup2.default, null)
                     )
                 )
             );
@@ -25000,4 +25538,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?32daae409c235a945f21
+//# sourceMappingURL=bundle.js.map?1301b5b03135a71f163f

@@ -17,7 +17,7 @@ Demo: https://trendmicro-frontend.github.io/react-checkbox
 2. At this point you can import `@trendmicro/react-checkbox` and its styles in your application as follows:
 
   ```js
-  import Checkbox from '@trendmicro/react-checkbox';
+  import { Checkbox, CheckboxGroup } from '@trendmicro/react-checkbox';
 
   // Be sure to include styles at some point, probably during your bootstraping
   import '@trendmicro/react-checkbox/dist/react-checkbox.css';
@@ -65,9 +65,34 @@ The label prop is optional, you can use children to pass through the component.
 <Checkbox checked indeterminate />
 ```
 
+### CheckboxGroup
+
+```jsx
+<CheckboxGroup
+    name="comic"
+    value={this.state.value}
+    onChange={(value, event) => {
+        this.setState({ value: value });
+    }}
+>
+    <div className="row">
+        <div className="col-xs-12 col-sm-6">
+            <Checkbox label="Batman (DC)" value="dc:batman" />
+            <Checkbox label="Hulk (Marvel)" value="marvel:hulk" />
+        </div>
+        <div className="col-xs-12 col-sm-6">
+            <Checkbox label="Superman (DC)" value="dc:superman" />
+            <Checkbox label="Spider-Man (Marvel)" value="marvel:spiderman" disabled />
+        </div>
+    </div>
+</CheckboxGroup>
+```
+
 ## API
 
 ### Properties
+
+#### Checkbox
 
 Name | Type | Default | Description
 :--- | :--- | :------ | :----------
@@ -82,6 +107,17 @@ checked | Boolean | | The checked state of the checkbox element.
 defaultChecked | Boolean | | The default checked state of the checkbox element.
 indeterminate | Boolean | | The indeterminate state of the checkbox element.
 defaultIndeterminate | Boolean | false | The default indeterminate state of the checkbox element.
+
+#### CheckboxGroup
+
+Name | Type | Default | Description
+:--- | :--- | :------ | :----------
+children | any | | Children to pass through the component.
+disabled | Boolean | false | If true, the checkbox group will be displayed as disabled.
+name | String | | Name for the input element group.
+value | any | | The value of the checkbox group.
+defaultValue | any | | The default value of the checkbox group.
+onChange | Function | | Callback function that will be invoked when the value changes.
 
 ### Class Properties
 
@@ -103,6 +139,25 @@ Name | Type | Description
 :--- | :--- | :----------
 checked | Boolean | Get the checked state.
 indeterminate | Boolean | Get the indeterminate state.
+
+#### CheckboxGroup
+
+Use the ref property to get a reference to this component:
+
+```jsx
+<RadioGroup
+    ref={node => {
+        if (node) {
+            this.checkboxGroup = node;
+            console.log(this.checkboxGroup.value);
+        }
+    }}
+/>
+```
+
+Name | Type | Description
+:--- | :--- | :----------
+value | any | Get the value of the checkbox group.
 
 ## License
 
