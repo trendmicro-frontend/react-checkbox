@@ -7,13 +7,16 @@ import Checkbox from './Checkbox';
 class CheckboxGroup extends PureComponent {
     static propTypes = {
         disabled: PropTypes.bool,
-        onChange: PropTypes.func,
+        name: PropTypes.string,
         value: PropTypes.arrayOf(PropTypes.any),
-        defaultValue: PropTypes.arrayOf(PropTypes.any)
+        defaultValue: PropTypes.arrayOf(PropTypes.any),
+        onChange: PropTypes.func,
+        depth: PropTypes.number
     };
 
     static defaultProps = {
-        disabled: false
+        disabled: false,
+        depth: 1
     };
 
     state = {
@@ -45,7 +48,11 @@ class CheckboxGroup extends PureComponent {
         }
     };
 
-    renderChildren = (children) => {
+    renderChildren = (children, depth = 1) => {
+        if (depth > this.props.depth) {
+            return children;
+        }
+
         const mapChild = (child) => {
             if (!React.isValidElement(child) || !child.props) {
                 return child;
@@ -71,7 +78,7 @@ class CheckboxGroup extends PureComponent {
 
             if (child.props.children && typeof child.props.children === 'object') {
                 return cloneElement(child, {
-                    children: this.renderChildren(child.props.children)
+                    children: this.renderChildren(child.props.children, depth + 1)
                 });
             }
 

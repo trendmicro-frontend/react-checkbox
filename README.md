@@ -67,10 +67,13 @@ The label prop is optional, you can use children to pass through the component.
 
 ### CheckboxGroup
 
+When rendering checkboxes deeply nested inside the checkbox group, you need to pass a `depth` prop to limit the recursion depth.
+
 ```jsx
 <CheckboxGroup
     name="comic"
     value={this.state.value}
+    depth={3} // This is needed to minimize the recursion overhead
     onChange={(value, event) => {
         this.setState({ value: value });
     }}
@@ -85,6 +88,43 @@ The label prop is optional, you can use children to pass through the component.
             <Checkbox label="Spider-Man (Marvel)" value="marvel:spiderman" disabled />
         </div>
     </div>
+</CheckboxGroup>
+```
+
+## Prevent onChange Propagation
+
+You may need to use `event.stopPropagation()` to stop **onChange** propagation when wrapping an input element inside the **CheckboxGroup** or **Checkbox** component.
+
+```jsx
+<CheckboxGroup
+    name="checkboxgroup"
+    value={this.state.value}
+    onChange={(value, event) => {
+        this.setState({ value: value });
+    }}
+>
+    <Checkbox label="First option" value="one">
+        <div style={{ marginLeft: 22 }}>
+            <input
+                type="text"
+                onChange={(event) => {
+                    // Prevent onChange propagation
+                    event.stopPropagation();
+                }}
+            />
+        </div>
+    </Checkbox>
+    <Checkbox label="Second option" value="two">
+        <div style={{ marginLeft: 22 }}>
+            <input
+                type="text"
+                onChange={(event) => {
+                    // Prevent onChange propagation
+                    event.stopPropagation();
+                }}
+            />
+        </div>
+    </Checkbox>
 </CheckboxGroup>
 ```
 
@@ -118,6 +158,7 @@ name | String | | Name for the input element group.
 value | any | | The value of the checkbox group.
 defaultValue | any | | The default value of the checkbox group.
 onChange | Function | | Callback function that will be invoked when the value changes.
+depth | Number | 1 | Limits the recursion depth when rendering checkboxes deeply inside a checkbox group.
 
 ### Class Properties
 

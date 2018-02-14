@@ -24045,6 +24045,12 @@ var CheckboxGroup = (_temp2 = _class = function (_PureComponent) {
                 _this.props.onChange(newValue, event);
             }
         }, _this.renderChildren = function (children) {
+            var depth = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+            if (depth > _this.props.depth) {
+                return children;
+            }
+
             var mapChild = function mapChild(child) {
                 if (!_react2.default.isValidElement(child) || !child.props) {
                     return child;
@@ -24067,7 +24073,7 @@ var CheckboxGroup = (_temp2 = _class = function (_PureComponent) {
 
                 if (child.props.children && _typeof(child.props.children) === 'object') {
                     return (0, _react.cloneElement)(child, {
-                        children: _this.renderChildren(child.props.children)
+                        children: _this.renderChildren(child.props.children, depth + 1)
                     });
                 }
 
@@ -24106,11 +24112,14 @@ var CheckboxGroup = (_temp2 = _class = function (_PureComponent) {
     return CheckboxGroup;
 }(_react.PureComponent), _class.propTypes = {
     disabled: _propTypes2.default.bool,
-    onChange: _propTypes2.default.func,
+    name: _propTypes2.default.string,
     value: _propTypes2.default.arrayOf(_propTypes2.default.any),
-    defaultValue: _propTypes2.default.arrayOf(_propTypes2.default.any)
+    defaultValue: _propTypes2.default.arrayOf(_propTypes2.default.any),
+    onChange: _propTypes2.default.func,
+    depth: _propTypes2.default.number
 }, _class.defaultProps = {
-    disabled: false
+    disabled: false,
+    depth: 1
 }, _temp2);
 exports.default = CheckboxGroup;
 
@@ -25538,4 +25547,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?1301b5b03135a71f163f
+//# sourceMappingURL=bundle.js.map?5e95580ff2a4596d069e
