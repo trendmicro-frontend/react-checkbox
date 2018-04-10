@@ -62,23 +62,16 @@
     background-position: -81px 0;
 }
 
-// Disabled - text
-.control-checkbox.disabled > .control-text {
-    opacity: .4;
+.control-checkbox.disabled {
     cursor: not-allowed;
+
+    .text-label {
+        opacity: .5;
+    }
 }
 
 // Disabled - cursor
 .input-checkbox:disabled + .control-indicator {
     cursor: not-allowed;
-}
-
-// Checked:disabled
-.input-checkbox:checked:disabled + .control-indicator {
-    opacity: .4;
-}
-
-// Partial:disabled
-.input-checkbox:not(:checked):indeterminate:disabled + .control-indicator {
-    opacity: .4;
+    opacity: .5;
 }
