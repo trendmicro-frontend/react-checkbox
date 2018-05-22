@@ -19,7 +19,8 @@ class Checkbox extends PureComponent {
         defaultChecked: PropTypes.bool,
         indeterminate: PropTypes.bool,
         defaultIndeterminate: PropTypes.bool,
-        onChange: PropTypes.func
+        onChange: PropTypes.func,
+        onClick: PropTypes.func
     };
 
     static defaultProps = {
@@ -29,7 +30,7 @@ class Checkbox extends PureComponent {
 
     checkbox = null;
 
-    onChange = (event) => {
+    updateIndeterminateState = () => {
         if (typeof (this.props.indeterminate) !== 'undefined') {
             this.checkbox.indeterminate = !!this.props.indeterminate;
         }
@@ -57,6 +58,7 @@ class Checkbox extends PureComponent {
             disabled,
             defaultIndeterminate,
             onChange = noop,
+            onClick = noop,
 
             // Default props
             className,
@@ -90,9 +92,10 @@ class Checkbox extends PureComponent {
                         styles.inputCheckbox
                     )}
                     style={inputStyle}
-                    onChange={chainedFunction(
-                        this.onChange,
-                        onChange
+                    onChange={onChange}
+                    onClick={chainedFunction(
+                        this.updateIndeterminateState,
+                        onClick
                     )}
                 />
                 <i className={styles.controlIndicator} />

@@ -147,6 +147,8 @@ checked | Boolean | | The checked state of the checkbox element.
 defaultChecked | Boolean | | The default checked state of the checkbox element.
 indeterminate | Boolean | | The indeterminate state of the checkbox element.
 defaultIndeterminate | Boolean | false | The default indeterminate state of the checkbox element.
+onChange | Function(event) | | The callback function that is triggered when the state changes.
+onClick | Function(event) | | The callback function that is triggered when the checkbox is clicked.
 
 #### CheckboxGroup
 
@@ -157,7 +159,7 @@ disabled | Boolean | false | If true, the checkbox group will be displayed as di
 name | String | | Name for the input element group.
 value | any | | The value of the checkbox group.
 defaultValue | any | | The default value of the checkbox group.
-onChange | Function | | Callback function that will be invoked when the value changes.
+onChange | Function(value, event) | | The callback function that is triggered when the value changes.
 depth | Number | 1 | Limits the recursion depth when rendering checkboxes deeply inside a checkbox group.
 
 ### Class Properties
