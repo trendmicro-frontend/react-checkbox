@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import React, { cloneElement, PureComponent } from 'react';
 import Checkbox from './Checkbox';
 
+const getComponentType = (Component) => (Component ? (<Component />).type : undefined);
+
 class CheckboxGroup extends PureComponent {
     static propTypes = {
         disabled: PropTypes.bool,
@@ -58,12 +60,12 @@ class CheckboxGroup extends PureComponent {
                 return child;
             }
 
-            if (child.type === CheckboxGroup) {
+            if (child.type === getComponentType(CheckboxGroup)) {
                 // No nested checkbox groups
                 return child;
             }
 
-            if (child.type === Checkbox) {
+            if (child.type === getComponentType(Checkbox)) {
                 return cloneElement(child, {
                     checked: this.state.value.indexOf(child.props.value) >= 0,
                     disabled: this.props.disabled || child.props.disabled,
