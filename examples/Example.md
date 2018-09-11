@@ -49,9 +49,9 @@ const LabelText = styled.span`
 `;
 
 export default () => (
-    <Section className="row-sm-13 row-md-8 row-lg-10 row-xl-9">
+    <Section className="row-sm-13 row-md-8 row-lg-10 row-xl-14">
         <h3>Controlled Checkbox</h3>
-        <div className="col-md-6">
+        <div className="col-md-12">
             <h5>Native Checkbox (stacked)</h5>
             <div className="checkbox">
                 <label>
@@ -141,7 +141,7 @@ export default () => (
                 </label>
             </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-12">
             <h5>React Checkbox (stacked)</h5>
             <div className="checkbox">
                 <Checkbox
@@ -215,6 +215,7 @@ export default () => (
         </div>
     </Section>
 );
+
 ```
 
 Uncontrolled.jsx
@@ -231,9 +232,9 @@ const LabelText = styled.span`
 `;
 
 export default () => (
-    <Section className="row-sm-13 row-md-8 row-lg-10 row-xl-9">
+    <Section className="row-sm-13 row-md-8 row-lg-10 row-xl-14">
         <h3>Uncontrolled Checkbox</h3>
-        <div className="col-md-6">
+        <div className="col-md-12">
             <h5>Native Checkbox (stacked)</h5>
             <div className="checkbox">
                 <label>
@@ -323,7 +324,7 @@ export default () => (
                 </label>
             </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-12">
             <h5>React Checkbox (stacked)</h5>
             <div className="checkbox">
                 <Checkbox
