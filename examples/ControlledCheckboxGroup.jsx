@@ -22,6 +22,7 @@ export default class extends PureComponent {
                 <h5>Stacked</h5>
                 <p>{`Selected: ${this.state.items}`}</p>
                 <CheckboxGroup
+                    depth={2}
                     name="items"
                     value={this.state.items}
                     onChange={this.handleChangeByKey('items')}

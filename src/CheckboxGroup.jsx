@@ -8,11 +8,17 @@ const getComponentType = (Component) => (Component ? (<Component />).type : unde
 
 class CheckboxGroup extends PureComponent {
     static propTypes = {
+        /** If true, the checkbox group will be displayed as disabled. */
         disabled: PropTypes.bool,
+        /** Name for the input element group. */
         name: PropTypes.string,
+        /** The value of the checkbox group. */
         value: PropTypes.arrayOf(PropTypes.any),
+        /** The default value of the checkbox group. */
         defaultValue: PropTypes.arrayOf(PropTypes.any),
+        /** The callback function that is triggered when the value changes. */
         onChange: PropTypes.func,
+        /** Limits the recursion depth when rendering checkboxes deeply inside a checkbox group. */
         depth: PropTypes.number
     };
 

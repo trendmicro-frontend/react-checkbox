@@ -8,18 +8,28 @@ const noop = () => {};
 
 class Checkbox extends PureComponent {
     static propTypes = {
+        /** Text label to attach next to the checkbox element. */
         label: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.node
         ]),
+        /** Customized class name for the checkbox element. */
         inputClassName: PropTypes.object,
+        /** Customized style for the checkbox element. */
         inputStyle: PropTypes.object,
+        /** If true, the checkbox shown as disabled and cannot be modified. */
         disabled: PropTypes.bool,
+        /** The checked state of the checkbox element. */
         checked: PropTypes.bool,
+        /** The default checked state of the checkbox element. */
         defaultChecked: PropTypes.bool,
+        /** The indeterminate state of the checkbox element. */
         indeterminate: PropTypes.bool,
+        /** The default indeterminate state of the checkbox element. */
         defaultIndeterminate: PropTypes.bool,
+        /** The callback function that is triggered when the state changes. */
         onChange: PropTypes.func,
+        /** The callback function that is triggered when the checkbox is clicked. */
         onClick: PropTypes.func
     };
 
